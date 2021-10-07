@@ -6,19 +6,26 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/29 18:11:15 by zqadiri           #+#    #+#              #
-#    Updated: 2021/08/29 18:11:33 by zqadiri          ###   ########.fr        #
+#    Updated: 2021/10/07 12:53:18 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp phonebook.cpp contact.cpp
-OBJS		= $(SRCS:.cpp=.o)
-CXX			= clang++
-FLAGS		= -Wall -Wextra -Werror -I.
 NAME		= phonebook
 
+SRCS		= main.cpp PhoneBook.cpp Contact.cpp
+
+INCLUDES	= Contact.hpp PhoneBook.hpp
+
+OBJS		= $(SRCS:.cpp=.o)
+
+CC			= clang++
+
+FLAGS		= -Wall -Wextra -Werror
+
 all:		$(NAME)
-$(NAME):	$(OBJS)
-			$(CXX) $(FLAGS) -o $(NAME) $(OBJS)
+
+$(NAME):	$(SRCS)
+			$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:
 			rm -f $(OBJS)

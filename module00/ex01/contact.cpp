@@ -6,11 +6,11 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:12:13 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/08/29 18:12:15 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/07 12:53:47 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
 using namespace std;
 

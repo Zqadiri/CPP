@@ -1,5 +1,5 @@
-#include "contact.hpp"
-#include "phonebook.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 using namespace std;
 

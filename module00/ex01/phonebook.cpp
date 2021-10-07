@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:12:07 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/08/29 18:13:13 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/07 12:55:00 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
 using namespace std;
 
@@ -39,6 +39,6 @@ void    phonebook::print_full_list(void)
 					<< "|"
 					<< "  nickname" 
 					<< endl;
-    for (int i = 0; i < _index; i++)
+    for (size_t i = 0; i < _index; i++)
 	    _contacts[i].print_contact(i);
 }
