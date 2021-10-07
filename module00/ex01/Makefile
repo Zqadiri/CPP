@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= phonebook
+NAME		= yellow_phonebook
 
 SRCS		= main.cpp PhoneBook.cpp Contact.cpp
 

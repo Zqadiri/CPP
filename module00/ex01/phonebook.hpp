@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:14:14 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/07 12:54:06 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/07 13:09:03 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class phonebook
      functions
     */
     bool		add_contact(contact contact);
-	void		print_contact(int index);
 	void		print_full_list(void);
 };
 

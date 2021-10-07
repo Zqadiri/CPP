@@ -17,8 +17,6 @@
 # include <iomanip>
 # include <iostream>
 
-using std::string; // delete all std:: string
-
 class contact
 {
     private:
@@ -48,9 +46,9 @@ class contact
      class functions   
     */
         // think to switch to const // --> indique au compilateur que votre méthode ne modifie pas l'objet
-        void    print_field(string field_name);
-        void    print_contact(int index);
+        void    print_field(std::string field_name);
         void    print_all_contacts(void);
+        void    print_contact(int index);
 };
 
 #endif

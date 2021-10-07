@@ -12,27 +12,24 @@
 
 #include "Contact.hpp"
 
-using namespace std;
-
 contact::contact(){};
 contact::~contact(){};
 
-void    contact::print_field(string str)
+void    contact::print_field(std::string str)
 {
   if (str.length() > 10)
-	cout << str.substr(0, 9) << ".";
+	std::cout << str.substr(0, 9) << ".";
   else
-	cout << setw(10) << str;
+	std::cout << std::setw(10) << str;
 }
 
 void	contact::print_contact(int index)
 {
-  cout << setw(10) << index << "|";
+  std::cout << std::setw(10) << index << "|";
   this->print_field(_first_name);
-  cout << "|";
+  std::cout << "|";
   this->print_field(_last_name);
-  cout << "|";
+  std::cout << "|";
   this->print_field(_nickname);
-  cout << endl;
+  std::cout << std::endl;
 }
-

@@ -12,8 +12,6 @@
 
 #include "PhoneBook.hpp"
 
-using namespace std;
-
 phonebook::~phonebook(){};
 
 phonebook::phonebook(void){
@@ -31,14 +29,14 @@ bool    phonebook::add_contact(contact contact)
 
 void    phonebook::print_full_list(void)
 {
-    cout << setw(10)  << "index"
-					<< "|"
-					<< "first name"
-					<< "|"
-					<< " last name"
-					<< "|"
-					<< "  nickname" 
-					<< endl;
+    std:: cout << std::setw(10)	<< "index"
+								<< "|"
+								<< "first name"
+								<< "|"
+								<< " last name"
+								<< "|"
+								<< "  nickname" 
+								<< std::endl;
     for (size_t i = 0; i < _index; i++)
 	    _contacts[i].print_contact(i);
 }
