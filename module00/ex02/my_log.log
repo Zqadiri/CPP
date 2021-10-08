@@ -1,0 +1,51 @@
+[20210908_153839]index:0;amount:42;created
+[20210908_153839]index:1;amount:54;created
+[20210908_153839]index:2;amount:957;created
+[20210908_153839]index:3;amount:432;created
+[20210908_153839]index:4;amount:1234;created
+[20210908_153839]index:5;amount:0;created
+[20210908_153839]index:6;amount:754;created
+[20210908_153839]index:7;amount:16576;created
+displayAccountsInfos[20210908_153839] accounts:8;total:20049;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:0;amount:42;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:1;amount:54;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:2;amount:957;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:3;amount:432;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:4;amount:1234;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:5;amount:0;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:6;amount:754;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:7;amount:16576;deposits:0;withdrawals:0
+makeDeposit[20210908_153839] index:8;amount:20049;deposits:5;withdrawals:0
+makeDeposit[20210908_153839] index:8;amount:20049;deposits:765;withdrawals:0
+makeDeposit[20210908_153839] index:8;amount:20049;deposits:564;withdrawals:0
+makeDeposit[20210908_153839] index:8;amount:20049;deposits:2;withdrawals:0
+makeDeposit[20210908_153839] index:8;amount:20049;deposits:87;withdrawals:0
+makeDeposit[20210908_153839] index:8;amount:20049;deposits:23;withdrawals:0
+makeDeposit[20210908_153839] index:8;amount:20049;deposits:9;withdrawals:0
+makeDeposit[20210908_153839] index:8;amount:20049;deposits:20;withdrawals:0
+displayAccountsInfos[20210908_153839] accounts:8;total:20049;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:0;amount:42;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:1;amount:54;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:2;amount:957;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:3;amount:432;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:4;amount:1234;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:5;amount:0;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:6;amount:754;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:7;amount:16576;deposits:0;withdrawals:0
+makeWithdrawal[20210908_153839] index:0;p_amount:42;withdrawal:0;amount:0;nb_withdrawals:321
+makeWithdrawal[20210908_153839] index:1;p_amount:54;withdrawal:0;amount:0;nb_withdrawals:34
+makeWithdrawal[20210908_153839] index:2;p_amount:957;withdrawal:0;amount:0;nb_withdrawals:657
+makeWithdrawal[20210908_153839] index:3;p_amount:432;withdrawal:0;amount:0;nb_withdrawals:4
+makeWithdrawal[20210908_153839] index:4;p_amount:1234;withdrawal:0;amount:0;nb_withdrawals:76
+makeWithdrawal[20210908_153839] index:5;p_amount:0;withdrawal:0;amount:0;nb_withdrawals:275
+makeWithdrawal[20210908_153839] index:6;p_amount:754;withdrawal:0;amount:0;nb_withdrawals:657
+makeWithdrawal[20210908_153839] index:7;p_amount:16576;withdrawal:0;amount:0;nb_withdrawals:7654
+displayAccountsInfos[20210908_153839] accounts:8;total:20049;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:0;amount:42;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:1;amount:54;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:2;amount:957;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:3;amount:432;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:4;amount:1234;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:5;amount:0;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:6;amount:754;deposits:0;withdrawals:0
+displayStatus[20210908_153839] index:7;amount:16576;deposits:0;withdrawals:0
