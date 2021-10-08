@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 18:09:51 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/08 18:17:18 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/08 18:45:41 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Zombie
         ~Zombie(void);
         void    announce(void);
         Zombie* newZombie( std::string name );
-        void randomChump( std::string name );
+        void    randomChump( std::string name );
 };
 
 #endif
