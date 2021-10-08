@@ -6,7 +6,7 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 17:44:07 by zqadiri           #+#    #+#              #
-#    Updated: 2021/10/07 17:51:00 by zqadiri          ###   ########.fr        #
+#    Updated: 2021/10/08 13:17:25 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ FLAGS		= -Wall -Wextra -Werror
 all:		$(NAME)
 
 $(NAME):	$(SRCS)
-			$(CC) $(FLAGS) $(SRCS) -o $(NAME)
+			$(CC) $(FLAGS) -I $(INCLUDES) $(SRCS) -o $(NAME)
 
 clean:
 			rm -f $(OBJS)

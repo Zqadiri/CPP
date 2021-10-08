@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 17:52:14 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/08 13:01:12 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/08 13:22:15 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,49 @@
 #include <ctime>
 #include <iomanip>
 
-Account::Account()
-{
+/*
+    a static variable inside a class should be initialized explicitly 
+    by the user using the class name 
+    and scope resolution operator outside the class 
+*/
 
-}
+int Account::_nbAccounts = 0;
+int Account::_totalAmount = 0;
+int Account::_totalNbDeposits = 0;
+int Account::_totalNbWithdrawals = 0;
 
-Account::Account(int initial_deposit)
-{
+/*
+    Constructors & deconstructor
+*/
+
+
+Account::Account(void){}
+
+Account::Account(int initial_deposit){
     initial_deposit = 0;
 }
 
-Account::~Account()
-{
-    
+Account::~Account(void){}
+
+/*
+    Getters
+*/
+
+int	Account::getNbAccounts( void ){
+    return Account::_nbAccounts;
 }
+
+int	Account::getTotalAmount( void ){
+    return Account::_totalAmount;
+}
+
+int	Account::getNbDeposits( void ){
+    return Account::_totalNbDeposits;
+}
+int	Account::getNbWithdrawals( void ){
+    return Account::_totalNbWithdrawals;
+}
+
 /*
     [19920104_091532]
     year month day _ hour min sec
