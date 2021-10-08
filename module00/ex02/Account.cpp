@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 17:52:14 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/08 17:59:03 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/08 18:23:01 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0;
 
 /*
-    Constructors & deconstructor
+    Constructors & destructor
 */
 
 
