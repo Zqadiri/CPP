@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:14:02 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/07 17:30:03 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/08 11:47:23 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class contact
 {
 	/*
-		Member variables and functions are private by default.
+		Member variables are private = encapsulation
 	*/
 	private:
 		std::string _first_name;
@@ -33,7 +33,7 @@ class contact
 	/*
 	 constructor is a special type of member function of a class which initializes objects of a class
 	*/
-		contact();
+		contact(void);
 		contact(std::string fn, std::string ln, std::string nn, std::string pn, std::string ad) // PARAMETERIZED CONSTRUCTOR
 		{
 			_first_name = fn;
@@ -45,10 +45,7 @@ class contact
 	/*
 	 we should write a destructor to release memory before the class instance is destroyed. This must be done to avoid memory leak.
 	*/
-		~contact();
-	/*
-	 class functions   
-	*/
+		~contact(void);
 		// think to switch to const // --> indique au compilateur que votre méthode ne modifie pas l'objet
 		void	print_field(std::string field_name);
 		void	print_all_contacts(void);

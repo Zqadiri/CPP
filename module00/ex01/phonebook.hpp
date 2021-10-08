@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:14:14 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/07 17:28:36 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/07 19:25:13 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class phonebook
         contact _contacts[8];
         int  _bookmark;
     public:
-        phonebook();
-        ~phonebook();
+        phonebook(void);
+        ~phonebook(void);
 
     bool		add_contact(contact contact);
 	void		print_full_list(void);

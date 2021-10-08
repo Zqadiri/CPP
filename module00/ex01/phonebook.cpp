@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:12:07 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/07 17:28:08 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/08 12:20:47 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ void    phonebook::print_full_list(void)
 {
     std:: cout << std::setw(10)	<< "index"
 								<< "|"
-								<< "first name"
+			   << std::setw(10) << "first name"
 								<< "|"
-								<< " last name"
+			   << std::setw(10) << "last name"
 								<< "|"
-								<< "  nickname" 
+			   << std::setw(10) << "nickname" 
 								<< std::endl;
     for (int i = 0; i < _bookmark; i++)
 	    _contacts[i].print_contact(i);
