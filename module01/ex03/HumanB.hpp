@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 14:09:29 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/09 16:31:35 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/09 17:40:31 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/09 19:38:29 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP_
+#define HUMANB_HPP_
 
-/*
- NOTICE : new keyword create an object and a pointer to it it means thath the object 
- is stored in the heap, you must delete the object by yourself using delete keyword
-*/
+#include<iostream>
+#include<string>
+#include "Weapon.hpp"
 
-Zombie* newZombie(std::string name)
+class   HumanB
 {
-    Zombie *deadHead = new Zombie(name);
-    this->name  = setName(name);
-    return deadHead;
-}
+    private:
+        //WEAPON
+        std::string Name;
+        Weapon *weaponB;
+    public:
+        ~HumanB(void);
+        HumanB(std::string name);
+        void    attack(void);
+        void    setWeapon(Weapon &weaponB);
+};
+
+#endif
