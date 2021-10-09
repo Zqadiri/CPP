@@ -33,27 +33,27 @@
 [19920104_091532] index:6;amount:763;deposits:0;withdrawals:0
 [19920104_091532] index:7;amount:16596;deposits:0;withdrawals:0
 [19920104_091532] index:0;p_amount:47;withdrawal:refused
-[19920104_091532] index:1;p_amount:819;withdrawal:34;amount:819;nb_withdrawals:0
-[19920104_091532] index:2;p_amount:1521;withdrawal:657;amount:1521;nb_withdrawals:0
-[19920104_091532] index:3;p_amount:434;withdrawal:4;amount:434;nb_withdrawals:0
-[19920104_091532] index:4;p_amount:1321;withdrawal:76;amount:1321;nb_withdrawals:0
+[19920104_091532] index:1;p_amount:819;withdrawal:34;amount:785;nb_withdrawals:0
+[19920104_091532] index:2;p_amount:1521;withdrawal:657;amount:864;nb_withdrawals:0
+[19920104_091532] index:3;p_amount:434;withdrawal:4;amount:430;nb_withdrawals:0
+[19920104_091532] index:4;p_amount:1321;withdrawal:76;amount:1245;nb_withdrawals:0
 [19920104_091532] index:5;p_amount:23;withdrawal:refused
-[19920104_091532] index:6;p_amount:763;withdrawal:657;amount:763;nb_withdrawals:0
-[19920104_091532] index:7;p_amount:16596;withdrawal:7654;amount:16596;nb_withdrawals:0
+[19920104_091532] index:6;p_amount:763;withdrawal:657;amount:106;nb_withdrawals:0
+[19920104_091532] index:7;p_amount:16596;withdrawal:7654;amount:8942;nb_withdrawals:0
 [19920104_091532] accounts:8;total:20049;deposits:0;withdrawals:0
 [19920104_091532] index:0;amount:47;deposits:0;withdrawals:0
-[19920104_091532] index:1;amount:819;deposits:0;withdrawals:1
-[19920104_091532] index:2;amount:1521;deposits:0;withdrawals:1
-[19920104_091532] index:3;amount:434;deposits:0;withdrawals:1
-[19920104_091532] index:4;amount:1321;deposits:0;withdrawals:1
+[19920104_091532] index:1;amount:785;deposits:0;withdrawals:1
+[19920104_091532] index:2;amount:864;deposits:0;withdrawals:1
+[19920104_091532] index:3;amount:430;deposits:0;withdrawals:1
+[19920104_091532] index:4;amount:1245;deposits:0;withdrawals:1
 [19920104_091532] index:5;amount:23;deposits:0;withdrawals:0
-[19920104_091532] index:6;amount:763;deposits:0;withdrawals:1
-[19920104_091532] index:7;amount:16596;deposits:0;withdrawals:1
-[19920104_091532]index:7;amount:16596;closed
-[19920104_091532]index:6;amount:763;closed
+[19920104_091532] index:6;amount:106;deposits:0;withdrawals:1
+[19920104_091532] index:7;amount:8942;deposits:0;withdrawals:1
+[19920104_091532]index:7;amount:8942;closed
+[19920104_091532]index:6;amount:106;closed
 [19920104_091532]index:5;amount:23;closed
-[19920104_091532]index:4;amount:1321;closed
-[19920104_091532]index:3;amount:434;closed
-[19920104_091532]index:2;amount:1521;closed
-[19920104_091532]index:1;amount:819;closed
+[19920104_091532]index:4;amount:1245;closed
+[19920104_091532]index:3;amount:430;closed
+[19920104_091532]index:2;amount:864;closed
+[19920104_091532]index:1;amount:785;closed
 [19920104_091532]index:0;amount:47;closed

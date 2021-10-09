@@ -6,12 +6,12 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 18:09:51 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/09 15:09:29 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/09 15:53:18 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP_
-#define ZOMBIE_HPP_
+# define ZOMBIE_HPP_
 
 # include <string>
 # include <iomanip>
@@ -31,7 +31,7 @@ class Zombie
         void    setName(std::string name);
         void    announce(void);
 };
-void    randomChump(std::string name);
-Zombie* newZombie(std::string name);
+
+Zombie* zombieHorde(int N, std::string name);
 
 #endif

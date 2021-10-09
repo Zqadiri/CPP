@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 18:08:32 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/09 15:12:12 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/09 15:29:26 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/09 15:52:57 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 int main(void)
 {
-    Zombie *new_Zombie;
-    
-    new_Zombie = newZombie("DEADHEAD");
-    new_Zombie->announce();
-    randomChump("BITER");
-    delete new_Zombie;
+    Zombie *Zombies;
+    int     N;
+
+    N = 5;
+    Zombies = zombieHorde(N, "deadHead");
+    for (int i = 0; i < N; i++)
+       Zombies[i].announce();
+    delete [] Zombies;   
     return (0);
 }

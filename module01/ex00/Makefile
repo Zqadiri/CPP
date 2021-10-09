@@ -6,13 +6,13 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/08 18:01:42 by zqadiri           #+#    #+#              #
-#    Updated: 2021/10/08 18:08:07 by zqadiri          ###   ########.fr        #
+#    Updated: 2021/10/09 15:01:47 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= zombie
 
-SRCS		= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS		=  Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 
 INCLUDES	= Zombie.hpp 
 
