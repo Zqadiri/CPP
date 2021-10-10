@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 17:52:14 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/10 17:23:54 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/10 18:53:54 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ Account::Account(void)
     index++  _amount=initial_deposit  created         
 */
 
-Account::Account(int initial_deposit){
+Account::Account(int initial_deposit) {
     // std::cout << "Constructor output\n";
     this->_accountIndex = this->_nbAccounts;
     this->_nbAccounts++;
