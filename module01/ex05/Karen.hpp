@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:30:40 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/10 18:53:30 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/14 12:10:59 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 class Karen
 {
     private:
-
         void debug( void );
         void info( void );
         void warning( void );
@@ -27,7 +26,8 @@ class Karen
     public:
         Karen(void);
         ~Karen(void);
-        void complain( std::string level );      
+        
+        void complain( std::string level);      
 };
 
 #endif

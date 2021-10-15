@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:40:31 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/09 19:38:29 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/15 12:05:33 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class   HumanB
         std::string Name;
         Weapon *weaponB;
     public:
+        HumanB(void);
         ~HumanB(void);
         HumanB(std::string name);
         void    attack(void);

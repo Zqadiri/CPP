@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 18:09:51 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/09 15:09:29 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/15 11:34:46 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class Zombie
 {
     private:
-        std::string name;
+        std::string _name;
 
     public:
         Zombie(void);

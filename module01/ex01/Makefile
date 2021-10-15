@@ -6,7 +6,7 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 15:27:59 by zqadiri           #+#    #+#              #
-#    Updated: 2021/10/09 15:28:33 by zqadiri          ###   ########.fr        #
+#    Updated: 2021/10/15 11:43:41 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,13 +25,13 @@ FLAGS		= -Wall -Wextra -Werror
 all:		$(NAME)
 
 $(NAME):	$(SRCS)
-			$(CC) $(FLAGS) -I $(INCLUDES) $(SRCS) -o $(NAME)
+			@ $(CC) $(FLAGS) -I $(INCLUDES) $(SRCS) -o $(NAME)
 
 clean:
-			rm -f $(OBJS)
+			@ rm -f $(OBJS)
 
 fclean:		clean
-			rm -f $(NAME)
+			@ rm -f $(NAME)
 
 re:			fclean $(NAME)
 

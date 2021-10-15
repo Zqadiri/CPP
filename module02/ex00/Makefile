@@ -5,16 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/08 18:01:42 by zqadiri           #+#    #+#              #
-#    Updated: 2021/10/15 11:41:16 by zqadiri          ###   ########.fr        #
+#    Created: 2021/10/14 12:54:49 by zqadiri           #+#    #+#              #
+#    Updated: 2021/10/14 12:55:38 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= zombie
+NAME		= fixed
 
-SRCS		=  Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
-
-INCLUDES	= Zombie.hpp 
+SRCS		=  main.cpp Fixed.cpp 
 
 OBJS		= $(SRCS:.cpp=.o)
 
@@ -25,13 +23,13 @@ FLAGS		= -Wall -Wextra -Werror
 all:		$(NAME)
 
 $(NAME):	$(SRCS)
-			@ $(CC) $(FLAGS) -I $(INCLUDES) $(SRCS) -o $(NAME)
+			$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:
-			@ rm -f $(OBJS)
+			rm -f $(OBJS)
 
 fclean:		clean
-			@ rm -f $(NAME)
+			rm -f $(NAME)
 
 re:			fclean $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 14:09:29 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/09 16:31:35 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/15 11:39:37 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 Zombie* newZombie(std::string name)
 {
     Zombie *deadHead = new Zombie(name);
-    this->name  = setName(name);
+    // Zombie *deadHead = new Zombie();
+    // deadHead->setName(name);
     return deadHead;
 }
