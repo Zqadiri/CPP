@@ -5,30 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/14 12:56:07 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/15 15:06:47 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/15 13:05:32 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/15 19:03:05 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP_
 #define FIXED_HPP_
 
+#include<iostream>
 #include <string>
-#include <iostream>
+#include <cmath>
 
 class Fixed
 {
-  private:
-	int fixedPointValue;
-	static const int fractionalBits = 8;
-  public:
-	Fixed(void);
-	~Fixed(void);
-	Fixed(const Fixed &obj);
-	  
+ 	private:
+		int fixedPointValue;
+		static const int fractionalBits = 8;
+	public:
+		Fixed(void);
+		~Fixed(void);
+		Fixed(const Fixed &obj);
+		Fixed(const int i);
+		Fixed(const float f);
+	
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
+	float toFloat( void ) const;
+	int toInt( void ) const;
 	void operator= (const Fixed &obj);
+	
 };
 
 #endif

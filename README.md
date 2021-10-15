@@ -26,3 +26,11 @@
 ## Creating a class object in c++
 
 [Creating a class object in c++](https://stackoverflow.com/questions/15310846/creating-a-class-object-in-c)
+
+## C++ Overloading
+
+[C++ Overloading (Operator and Function)](https://www.tutorialspoint.com/cplusplus/cpp_overloading.htm)
+
+[13.15 - Overloading the assignment operator](https://www.learncpp.com/cpp-tutorial/overloading-the-assignment-operator/)
+
+[Default constructor for a class with a reference data member?](https://stackoverflow.com/questions/22875186/default-constructor-for-a-class-with-a-reference-data-member)
