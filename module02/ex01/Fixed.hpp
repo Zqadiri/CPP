@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:32 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/15 19:03:05 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/16 19:33:30 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ class Fixed
 	float toFloat( void ) const;
 	int toInt( void ) const;
 	void operator= (const Fixed &obj);
-	
 };
+
+std::ostream & operator<< (std::ostream& os, Fixed const &fix);
 
 #endif

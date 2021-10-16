@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:37 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/15 18:27:15 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/16 19:28:45 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ Fixed::Fixed(const Fixed &obj)
 	*this = obj;
 }
 
+/*
+	The left-shift operator causes the bits in shift-expression to be shifted 
+	to the left by the number of positions specified by additive-expression
+*/
+
 Fixed::Fixed(const int i)
 {
 	std::cout << "Int constructor called" << std::endl;
@@ -52,6 +57,7 @@ Fixed::Fixed(const float f)
 float Fixed::toFloat( void ) const{
     return (((float)(this->fixedPointValue) / (1 << this->fractionalBits)));
 }
+
 /*
 	The purpose of the copy constructor and the assignment operator are almost equivalent -- 
 	both copy one object to another. However, the copy constructor initializes new objects,
@@ -71,4 +77,10 @@ int     Fixed::getRawBits(void) const{
 
 void    Fixed::setRawBits(int const raw){
 	this->fixedPointValue = raw;
+}
+
+std::ostream& operator<< (std::ostream& os, const Fixed & fix)
+{
+	os << fix.toFloat(); 
+	return os;
 }
