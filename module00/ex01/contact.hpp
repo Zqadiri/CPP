@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:14:02 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/08 11:47:23 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/17 12:44:19 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class contact
 		std::string _address;
 
 	public:
+	
 	/*
 	 constructor is a special type of member function of a class which initializes objects of a class
 	*/
@@ -46,7 +47,6 @@ class contact
 	 we should write a destructor to release memory before the class instance is destroyed. This must be done to avoid memory leak.
 	*/
 		~contact(void);
-		// think to switch to const // --> indique au compilateur que votre méthode ne modifie pas l'objet
 		void	print_field(std::string field_name);
 		void	print_all_contacts(void);
 		void	print_contact(int index);
