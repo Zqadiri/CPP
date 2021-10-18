@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:33 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/18 16:15:54 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/18 18:23:14 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ int main( void )
 {
 	/*-- overloaded operator== and operator!= --*/
 		
-		Fixed a(15);
+		Fixed a(12);
 		Fixed c(15);
 		std::cout << a << std::endl;
 		std::cout << c << std::endl;
 		std::cout << (a == c) << std::endl;
 		std::cout << (a != c) << std::endl;
 
-	/*-- overloaded operator> and operator>= --*/
+	// /*-- overloaded operator> and operator>= --*/
 	
 		std::cout << (a > c) << std::endl;
 		std::cout << (a >= c) << std::endl;

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:37 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/18 16:15:37 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/18 18:26:24 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,36 +85,46 @@ std::ostream& operator<< (std::ostream& os, const Fixed & fix){
 	return os;
 }
 
-bool	operator==(const Fixed& c1, const Fixed& c2){
+bool	Fixed::operator==(const Fixed& c1) const{
 	std::cout << "operator==" << std::endl;
-	return (c1.getRawBits() == c2.getRawBits());
+	return (this->getRawBits() == c1.getRawBits());
 }
 
-bool	operator!=(const Fixed& c1, const Fixed& c2){
+bool	Fixed::operator!=(const Fixed& c1) const{
 	std::cout << "operator!=" << std::endl;
-	return (!(c1.getRawBits() == c2.getRawBits()));
+	return (!(this->getRawBits() == c1.getRawBits()));
 }
 
-bool operator> (const Fixed& c1, const Fixed& c2){
+bool	Fixed::operator> (const Fixed& c1) const{
 	std::cout << "operator>" << std::endl;
-	return (c1.getRawBits() > c2.getRawBits());
+	return (this->getRawBits() > c1.getRawBits());
 }
 
-bool operator>=(const Fixed & a,const Fixed & b){
+bool	Fixed::operator>=(const Fixed & a) const{
 	std::cout << "operator>=" << std::endl;
-	if (a.getRawBits() > b.getRawBits())
+	if (this->getRawBits() > a.getRawBits())
 		return true;
-	else if (a.getRawBits() == b.getRawBits())
+	else if (this->getRawBits() == a.getRawBits())
 		return true;
 	return false; 
 }
 
-bool operator< (const Fixed& c1, const Fixed& c2)
-{
-	
+bool	Fixed::operator< (const Fixed& c1) const{
+	return (this->getRawBits() < c1.getRawBits());
 }
 
-bool operator<= (const Fixed& c1, const Fixed& c2)
+bool	Fixed::operator<= (const Fixed& c1) const{
+	std::cout << "operator<=" << std::endl;
+	if (this->getRawBits() < c1.getRawBits())
+		return true;
+	else if (this->getRawBits() == c1.getRawBits())
+		return true;
+	return false; 
+}
+
+/*-------- Arithmetic operators --------*/
+
+Fixed Fixed::operator+(const Fixed &a)
 {
-	
+	return (this->fixedPointValue + a.fixedPointValue);
 }
