@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 13:22:28 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 19:02:26 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/20 21:20:12 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ ScavTrap::ScavTrap(const ScavTrap &st) : ClapTrap(st){
 
 /*-- Operator --*/
 
-void	ScavTrap::operator=(const ScavTrap &s)
+ScavTrap	&ScavTrap::operator=(const ScavTrap &s)
 {
 	std::cout << "Scavtrap operator=" << std::endl;
 	this->_name = s._name;

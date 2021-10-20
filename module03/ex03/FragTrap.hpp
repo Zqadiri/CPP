@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 18:04:47 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 21:17:41 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/20 21:12:24 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : public virtual  ClapTrap
 {
 	public:
 		FragTrap();
@@ -23,7 +23,7 @@ class FragTrap : public ClapTrap
 		FragTrap(std::string name);
 		FragTrap(const FragTrap &);
 
-	FragTrap&   operator=(const FragTrap &);
+		FragTrap   &operator=(const FragTrap &);
 	void highFivesGuys(void);
 };
 

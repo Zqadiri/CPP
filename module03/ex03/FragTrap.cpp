@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 18:04:45 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 21:16:49 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/20 21:13:07 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ FragTrap::FragTrap(const FragTrap &clap): ClapTrap(clap){
 	std::cout << "FragTrap Copy Constructor" << std::endl;
 }
 
-FragTrap    &FragTrap::operator=(const FragTrap &obj) 
+FragTrap    &FragTrap::operator=(const FragTrap &obj)
 {
 	std::cout << "FragTrap operator=" << std::endl;
 	_name = obj._name;

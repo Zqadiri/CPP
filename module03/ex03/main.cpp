@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 18:04:47 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 21:17:41 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/20 11:52:09 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/20 18:25:29 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP_
-#define FRAGTRAP_HPP_
+#include"ClapTrap.hpp"
+#include "FragTrap.hpp"
 
-#include "ClapTrap.hpp"
-
-class FragTrap : public ClapTrap
+int main(void)
 {
-	public:
-		FragTrap();
-		~FragTrap();
-		FragTrap(std::string name);
-		FragTrap(const FragTrap &);
+    // ClapTrap c1("crap1");
+    // ClapTrap c2("crap2");
+    FragTrap st("FragTrap1");
+    FragTrap st2("FragTrap2");
 
-	FragTrap&   operator=(const FragTrap &);
-	void highFivesGuys(void);
-};
-
-#endif
+    st.attack("FragTrap2");
+    return 1;
+}

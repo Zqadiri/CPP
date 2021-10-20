@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:52:06 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 21:19:29 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/20 21:08:22 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,14 @@ ClapTrap::ClapTrap(const ClapTrap &clap): _name(clap._name), _hit_points(clap._h
 
 /*--- Operator --*/
 
-ClapTrap    &ClapTrap::operator=(const ClapTrap &obj)  
+ClapTrap    &ClapTrap::operator=(const ClapTrap &obj) 
 {
 	std::cout << "ClapTrap operator=" << std::endl;
 	_name = obj._name;
 	_hit_points = obj._hit_points;
 	_energy_points = obj._energy_points;
 	_attack_damage = obj._attack_damage;
-	return (*this);
+    return (*this);
 }
 
 /*----- Accessors -------*/

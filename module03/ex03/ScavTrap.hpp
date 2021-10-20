@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 18:04:47 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 21:17:41 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/20 13:22:36 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/20 21:14:31 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP_
-#define FRAGTRAP_HPP_
+#ifndef SCAVTRAP_HPP_
+#define SCAVTRAP_HPP_
 
-#include "ClapTrap.hpp"
+#include"ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
-{
+/*	
+	https://www.geeksforgeeks.org/order-constructor-destructor-call-c/
+*/
+
+class ScavTrap : public virtual ClapTrap
+{			
 	public:
-		FragTrap();
-		~FragTrap();
-		FragTrap(std::string name);
-		FragTrap(const FragTrap &);
+		ScavTrap();
+		ScavTrap(std::string name);
+		~ScavTrap();
+		ScavTrap(const ScavTrap &);
 
-	FragTrap&   operator=(const FragTrap &);
-	void highFivesGuys(void);
+	ScavTrap	&operator=(const ScavTrap &s);
+	
+	void attack(std::string const & target);
+	void guardGate();
 };
 
 #endif
