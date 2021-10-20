@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:37 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/18 18:26:24 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/20 11:42:17 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ Fixed::Fixed(const float f){
 }
 
 float Fixed::toFloat( void ) const{
-    return (((float)(this->fixedPointValue) / (1 << this->fractionalBits)));
+	return (((float)(this->fixedPointValue) / (1 << this->fractionalBits)));
 }
 
 /*
@@ -126,5 +126,69 @@ bool	Fixed::operator<= (const Fixed& c1) const{
 
 Fixed Fixed::operator+(const Fixed &a)
 {
-	return (this->fixedPointValue + a.fixedPointValue);
+	Fixed rtn;
+	rtn.setRawBits(this->fixedPointValue + a.getRawBits());
+	return (rtn);
 }
+
+Fixed Fixed::operator*(const Fixed &a)
+{
+	Fixed rtn;
+	rtn.setRawBits(this->fixedPointValue * a.getRawBits());
+	return (rtn);
+}
+
+Fixed Fixed::operator-(const Fixed &a)
+{
+	Fixed rtn;
+	rtn.setRawBits(this->fixedPointValue - a.getRawBits());
+	return (rtn);
+}
+
+Fixed Fixed::operator/(const Fixed &a)
+{
+	Fixed rtn;
+	rtn.setRawBits(this->fixedPointValue / a.getRawBits());
+	return (rtn);
+}
+
+/*-------- overloading postfix and prefix operators --------*/
+
+/*
+	T& T::operator++()	=> Prefix Increment
+	T& T::operator--()	=> Prefix Decrement
+*/
+
+/*
+	Pre-increment and pre-decrement operators increments or decrements the value of the 
+	object and returns a reference to the result.
+	
+*/
+
+
+Fixed & Fixed::operator++(void)
+{
+	this->fixedPointValue++;
+	return (*this);
+}
+
+Fixed & Fixed::operator--(void)
+{
+	this->fixedPointValue--;
+	return (*this);
+}
+
+/*
+	T T::operator++(int) => Postfix Increment
+	T T::operator++(int) => Postfix Decrement
+*/
+
+/*
+	Post-increment and post-decrement creates a copy of the object, increments or decrements 
+	value of the object and returns the copy from before the increment or decrement.
+*/
+
+// Fixed Fixed::operator++(int)
+// {
+
+// }

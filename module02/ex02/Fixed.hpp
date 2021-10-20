@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:32 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/18 18:25:02 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/19 19:33:51 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,15 @@ class Fixed
 	bool operator<= (const Fixed& c1) const;
 	
 	Fixed operator+(const Fixed &a);
+	Fixed operator*(const Fixed &a);
+	Fixed operator-(const Fixed &a);
+	Fixed operator/(const Fixed &a);
+
+	Fixed & operator++(void);
+	Fixed & operator--(void);
+	Fixed operator++(int);
+	Fixed operator--(int);
+	
 };
 
 std::ostream & operator<< (std::ostream& os, Fixed const &fix);
