@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:52:06 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 17:59:45 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/20 18:41:48 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,36 @@
 /*----- Constructor & Destructor -----*/
 
 ClapTrap::ClapTrap(void){
-    std::cout << "Default" << std::endl;
+    std::cout << "ClapTrap Default Constructor" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void){
-	std::cout << "--Destructor--" << std::endl;
+	std::cout << "ClapTrap Destructor" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "--Constructor--" << std::endl;
+	std::cout << "ClapTrap Parameterized Constructor" << std::endl;
 	this->_name = name;
 	this->_hit_points = 10;
 	this->_energy_points = 10;
 	this->_attack_damage = 0;
+}
+
+ClapTrap::ClapTrap(const ClapTrap &clap): _name(clap._name), _hit_points(clap._hit_points), 
+	_energy_points(clap._energy_points), _attack_damage(clap._attack_damage){
+	std::cout << "ClapTrap Copy Constructor" << std::endl;
+}
+
+/*--- Operator --*/
+
+void    ClapTrap::operator=(const ClapTrap &obj) 
+{
+	std::cout << "ClapTrap operator=" << std::endl;
+	_name = obj._name;
+	_hit_points = obj._hit_points;
+	_energy_points = obj._energy_points;
+	_attack_damage = obj._attack_damage;
 }
 
 /*----- Accessors -------*/
