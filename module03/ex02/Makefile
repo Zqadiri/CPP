@@ -6,13 +6,13 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 11:50:20 by zqadiri           #+#    #+#              #
-#    Updated: 2021/10/20 16:14:06 by zqadiri          ###   ########.fr        #
+#    Updated: 2021/10/20 18:04:20 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	scavcrap
+NAME		=	FragTrap
 
-SRCS		=  ClapTrap.cpp main.cpp  ScavTrap.cpp 
+SRCS		=  ClapTrap.cpp main.cpp  ScavTrap.cpp   FragTrap.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:52:08 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 12:19:50 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/20 17:48:52 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 #include<iostream>
 #include<string>
-
 
 class ClapTrap
 {

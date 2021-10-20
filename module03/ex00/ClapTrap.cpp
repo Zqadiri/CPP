@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:52:06 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 13:09:32 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/20 17:59:45 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 /*----- Constructor & Destructor -----*/
 
-ClapTrap::ClapTrap(void){}
+ClapTrap::ClapTrap(void){
+    std::cout << "Default" << std::endl;
+}
 
 ClapTrap::~ClapTrap(void){
 	std::cout << "--Destructor--" << std::endl;
@@ -29,6 +31,7 @@ ClapTrap::ClapTrap(std::string name)
 	this->_energy_points = 10;
 	this->_attack_damage = 0;
 }
+
 /*----- Accessors -------*/
 
 std::string ClapTrap::getName(void){
@@ -65,6 +68,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 	if (this->_hit_points > 0  && this->_hit_points >= amount)
 	{
 		this->_hit_points -= amount;
+		this->_energy_points -= amount;
 		std::cout << "ClapTrap " << this->getName() 
 		<< " has " << this->getHitPoints()  <<" hit points after taking {" << 
 		amount << "} points of damage!" << std::endl;
@@ -72,6 +76,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 	else
 	{
 		this->_hit_points = 0;
+		this->_energy_points = 0;
 		std::cout << "ClapTrap " << this->getName() << " is dead *_-" << std::endl;
 	}
 }

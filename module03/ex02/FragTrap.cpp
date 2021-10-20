@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 13:22:36 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 18:01:08 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/20 18:04:45 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/20 18:06:00 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP_
-#define SCAVTRAP_HPP_
+#include"FragTrap.hpp"
 
-#include"ClapTrap.hpp"
+FragTrap::FragTrap(/* args */)
+{
+}
 
-/*	
-	https://www.geeksforgeeks.org/order-constructor-destructor-call-c/
-*/
-
-class ScavTrap : public ClapTrap
-{			
-	public:
-		ScavTrap();
-		ScavTrap(std::string name);
-		~ScavTrap();
-	
-	void attack(std::string const & target);
-	void guardGate();
-};
-
-#endif
+FragTrap::~FragTrap()
+{
+}
