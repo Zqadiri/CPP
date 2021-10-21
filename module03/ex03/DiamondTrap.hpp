@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 20:11:47 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 21:07:18 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/21 12:23:43 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		DiamondTrap(const DiamondTrap &);
 
 		DiamondTrap &operator=(const DiamondTrap &obj);
-		void	whoAmI(void);
+		void	whoAmI();
 		void	attack(std::string const & target);
 };
 

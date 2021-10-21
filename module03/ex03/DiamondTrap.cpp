@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 20:11:49 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 21:12:03 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/21 12:25:29 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ DiamondTrap & DiamondTrap::operator=(const DiamondTrap &obj)
     return (*this);
 }
 
-void whoAmI(void)
-{
-    // std::cout << _name << std::endl;
+void DiamondTrap::whoAmI(){
+    std::cout << "DiamondTrap's name :"<< this->_name << std::endl;
+    std::cout << "ClapTrap's name :"<< ClapTrap::getName() << std::endl;
+
 }
 
-void DiamondTrap::attack(std::string const & target)
-{
+void DiamondTrap::attack(std::string const & target){
     ScavTrap::attack(target);
 }

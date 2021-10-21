@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 13:22:28 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 21:20:12 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/21 12:26:26 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &s)
 	this->_hit_points = s._hit_points;
 	this->_energy_points = s._energy_points;
 	this->_attack_damage = s._attack_damage;
+	return (*this);
 }
 
 ScavTrap::~ScavTrap(void){

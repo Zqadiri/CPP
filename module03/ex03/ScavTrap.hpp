@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 13:22:36 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 21:14:31 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/21 12:27:12 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class ScavTrap : public virtual ClapTrap
 		ScavTrap(const ScavTrap &);
 
 	ScavTrap	&operator=(const ScavTrap &s);
-	
 	void attack(std::string const & target);
 	void guardGate();
 };
