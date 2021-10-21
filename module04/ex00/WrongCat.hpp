@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 13:22:36 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/21 16:03:54 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/21 16:18:27 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/21 16:39:46 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP_
-#define SCAVTRAP_HPP_
+#ifndef WRONGCAT_HPP_
+#define WRONGCAT_HPP_
 
-#include"ClapTrap.hpp"
+#include "WrongAnimal.hpp"
 
-/*	
-	https://www.geeksforgeeks.org/order-constructor-destructor-call-c/
-*/
-
-class ScavTrap : public ClapTrap
-{			
+class WrongCat : public WrongAnimal
+{
 	public:
-		ScavTrap();
-		ScavTrap(std::string name);
-		~ScavTrap();
-		ScavTrap(const ScavTrap &);
-
-	ScavTrap	&operator=(const ScavTrap &s);
-	void attack(std::string const & target);
-	void guardGate();
+		WrongCat(void);
+		~WrongCat(void);
+		WrongCat(std::string);
+		WrongCat(const WrongCat &);
+	WrongCat	&operator=(const WrongCat &obj);
+	std::string getType(void) const;
+	void	makeSound(void)const;
 };
 
 #endif

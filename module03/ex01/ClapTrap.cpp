@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:52:06 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 21:20:53 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/21 16:07:57 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,10 @@ ClapTrap::ClapTrap(std::string name)
 	this->_attack_damage = 0;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &clap): _name(clap._name), _hit_points(clap._hit_points), 
+ClapTrap::ClapTrap(const ClapTrap &clap) : _name(clap._name), _hit_points(clap._hit_points), 
 	_energy_points(clap._energy_points), _attack_damage(clap._attack_damage){
 	std::cout << "ClapTrap Copy Constructor" << std::endl;
+	// *this = clap;
 }
 
 /*--- Operator --*/

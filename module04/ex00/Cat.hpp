@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/20 13:22:36 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/21 16:03:54 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/21 15:40:48 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/21 16:34:59 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP_
-#define SCAVTRAP_HPP_
+#ifndef CAT_HPP_
+#define CAT_HPP_
 
-#include"ClapTrap.hpp"
+#include "Animal.hpp"
 
-/*	
-	https://www.geeksforgeeks.org/order-constructor-destructor-call-c/
-*/
-
-class ScavTrap : public ClapTrap
-{			
+class Cat : public Animal
+{
 	public:
-		ScavTrap();
-		ScavTrap(std::string name);
-		~ScavTrap();
-		ScavTrap(const ScavTrap &);
-
-	ScavTrap	&operator=(const ScavTrap &s);
-	void attack(std::string const & target);
-	void guardGate();
+		Cat(void);
+		~Cat(void);
+		Cat(std::string);
+		Cat(const Cat &);
+	Cat	&operator=(const Cat &obj);
+	std::string getType(void) const;
+	void	makeSound(void)const;
 };
 
 #endif
