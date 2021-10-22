@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 17:59:27 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/21 18:02:07 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/22 12:18:13 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@
 
 class Brain
 {
-    private:
-        std::string _ideas[100];
-    public:
-        Brain(/* args */);
-        ~Brain();
+	private:
+		std::string ideas[100];
+	public:
+		Brain();
+		Brain( Brain const & src );
+		~Brain();
+		Brain &		operator=( Brain const & rhs );
+		void setIdeas(std::string idea);
+		std::string getIdea(unsigned int i);
 };
 
 #endif

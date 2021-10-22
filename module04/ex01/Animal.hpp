@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 12:30:13 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/21 16:45:41 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/22 12:24:52 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal
 		
 	public:
 		Animal();
-		~Animal();
+		virtual ~Animal();
 		Animal(std::string type);
 		Animal(const Animal&);
 		Animal	&operator=(const Animal &obj);
