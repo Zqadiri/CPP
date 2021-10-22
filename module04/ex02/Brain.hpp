@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/22 15:21:02 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/22 18:04:50 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/21 17:59:27 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/22 12:18:13 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BRAIN_HPP_
+#define BRAIN_HPP_
+
 #include "Animal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
 
-
-int main()
+class Brain
 {
-	// const Animal* meta = new Animal();
-	const Cat* j = new Cat("Cati");
-	const Dog* i = new Dog("Dogi");
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	// delete j;
-	// delete i;
-	// meta->makeSound();
-}
+	private:
+		std::string ideas[100];
+	public:
+		Brain();
+		Brain( Brain const & src );
+		~Brain();
+		Brain &		operator=( Brain const & rhs );
+		void setIdeas(std::string idea);
+		std::string getIdea(unsigned int i);
+};
+
+#endif

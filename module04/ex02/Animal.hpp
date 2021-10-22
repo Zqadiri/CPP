@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/22 15:21:02 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/22 18:04:50 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/21 12:30:13 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/22 18:03:08 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
+#ifndef ANIMAL_HPP_
+#define ANIMAL_HPP_
 
+#include <iostream>
+#include <string>
 
-int main()
+class Animal
 {
-	// const Animal* meta = new Animal();
-	const Cat* j = new Cat("Cati");
-	const Dog* i = new Dog("Dogi");
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	// delete j;
-	// delete i;
-	// meta->makeSound();
-}
+	protected:
+		std::string _type;
+	public:
+		Animal();
+		~Animal();
+		Animal(std::string type);
+		Animal(const Animal&);
+		Animal	&operator=(const Animal &obj);
+		virtual std::string	getType(void) const;
+		virtual void	makeSound() const = 0;
+};
+
+#endif
+

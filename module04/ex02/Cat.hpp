@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/22 15:21:02 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/22 18:04:50 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/10/21 15:40:48 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/10/22 13:06:27 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CAT_HPP_
+#define CAT_HPP_
+
 #include "Animal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
+#include "Brain.hpp"
 
-
-int main()
+class Cat : public Animal
 {
-	// const Animal* meta = new Animal();
-	const Cat* j = new Cat("Cati");
-	const Dog* i = new Dog("Dogi");
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	// delete j;
-	// delete i;
-	// meta->makeSound();
-}
+	private:
+		Brain *brain;
+	public:
+		Cat(void);
+		~Cat(void);
+		Cat(std::string);
+		Cat(const Cat &);
+
+	Cat	&operator=(const Cat &obj);
+	std::string getType(void) const;
+	void	makeSound(void)const;
+
+	Brain *getBrain( void );
+	void setBrain(std::string str);		
+};
+
+#endif
