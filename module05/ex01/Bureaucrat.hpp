@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:15:57 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/23 15:38:51 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/26 15:14:55 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include "Form.hpp"
+
+class Form; /*forward declaration*/
 
 class Bureaucrat
 {
@@ -48,6 +51,8 @@ class Bureaucrat
 	  			return "GradeTooLow";
 			}
 		};
+
+		void	signForm(Form &);
 };
 
 std::ostream & operator<< (std::ostream&, Bureaucrat const &);

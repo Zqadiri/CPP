@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 15:23:55 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/26 13:21:43 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/10/26 14:59:28 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 #include <string>
 #include <iostream>
+#include "Bureaucrat.hpp"
 
+class Bureaucrat;
 class Form
 {
 	private:
@@ -49,8 +51,7 @@ class Form
    			}
 		};
 
-		void	beSigned(Form &);
-
+		void	beSigned(Bureaucrat &);
 };
 
 std::ostream &operator<< (std::ostream &o, const Form &);
