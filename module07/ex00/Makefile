@@ -1,0 +1,36 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/11/03 11:31:24 by zqadiri           #+#    #+#              #
+#    Updated: 2021/11/03 11:31:50 by zqadiri          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME		= whatever
+
+SRCS		= main.cpp whatever.cpp
+
+OBJS		= $(SRCS:.cpp=.o)
+
+CC			= clang++
+
+FLAGS		= -Wall -Wextra -Werror
+
+all:		$(NAME)
+
+$(NAME):	$(SRCS)
+			@ $(CC) $(FLAGS) $(SRCS) -o $(NAME)
+
+clean:
+			@ rm -f $(OBJS)
+
+fclean:		clean
+			@ rm -f $(NAME)
+
+re:			fclean $(NAME)
+
+.PHONY:		all clean fclean re

@@ -7,6 +7,8 @@
 
 ## Standard Library headers :
 
+[Understanding C++ - From source to binaries](https://www.daniweb.com/programming/software-development/tutorials/466177/understanding-c-from-source-to-binaries)
+
 [C++ Standard Library headers](https://en.cppreference.com/w/cpp/header)
 
 ## Namespaces :
@@ -18,6 +20,8 @@
 ## Constructor :
 
 [](https://www.geeksforgeeks.org/constructors-c/)
+
+[What is The Rule of Three?](https://stackoverflow.com/questions/4172722/what-is-the-rule-of-three)
 
 ## Destructor :
 
@@ -34,3 +38,53 @@
 [13.15 - Overloading the assignment operator](https://www.learncpp.com/cpp-tutorial/overloading-the-assignment-operator/)
 
 [Default constructor for a class with a reference data member?](https://stackoverflow.com/questions/22875186/default-constructor-for-a-class-with-a-reference-data-member)
+
+## Fixed point representation:
+
+Digital Computers use  Binary number system to represent all types of information inside the computers. Digital representations are easier to design, storage is easy, accuracy and precision are greater.
+
+There are two major approaches to store real numbers
+
+[Introduction to Fixed Point Number Representation](https://inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html)
+
+## Inheritance
+
+[Inheritance in C++ - GeeksforGeeks](https://www.geeksforgeeks.org/inheritance-in-c/)
+
+## Virtual inheritance
+
+[In C++, what is a virtual base class?](https://stackoverflow.com/questions/21558/in-c-what-is-a-virtual-base-class)
+
+[Polymorphism in C++](https://stackoverflow.com/questions/5854581/polymorphism-in-c/5854862#5854862)
+
+## Exception
+
+[C++ Cookbook](https://www.oreilly.com/library/view/c-cookbook/0596007612/ch09s02.html)
+
+[C++ Tutorial => Custom exception](https://riptutorial.com/cplusplus/example/23640/custom-exception)
+
+[Correct way to inherit from std::exception](https://stackoverflow.com/questions/8152720/correct-way-to-inherit-from-stdexception)
+
+[A standard way in C++ to define an exception class and to throw exceptions](https://stackoverflow.com/questions/6159665/a-standard-way-in-c-to-define-an-exception-class-and-to-throw-exceptions)
+
+[Writing custom exceptions in C++](https://stackoverflow.com/questions/13258786/writing-custom-exceptions-in-c)
+
+## Cast :
+
+**`reinterpret_cast`** is a type of casting operator used in C++.
+
+- It is used to convert one pointer of another pointer of any type, no matter either the class is related to each other or not.
+- It does not check if the pointer type and data pointed by the pointer is same or no
+
+**Syntax :**
+
+```cpp
+
+**data_type *var_name = 
+       reinterpret_cast <data_type *>(pointer_variable);**
+```
+
+**`reinterpret_cast`  vs `static_cast`**
+
+> When you convert for example int(12) to unsigned float (12.0f)your processor needs to invoke some calculations as both numbers have different bit representations. This is what static_cast stands for. On the other hand, when you call reinterpret_cast the CPU does not invoke any calculations. It just treats a set of bits in the memory as if it had another type. So when you convert int* to float* with this keyword, the new value (after pointer dereferencing) has nothing to do with the old value in mathematical meaning.
+>
