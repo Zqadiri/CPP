@@ -6,13 +6,13 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 12:39:57 by zqadiri           #+#    #+#              #
-#    Updated: 2021/11/02 15:56:58 by zqadiri          ###   ########.fr        #
+#    Updated: 2021/11/02 17:09:18 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= convertt
 
-SRCS		= main.cpp convert.cpp 
+SRCS		= main.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
