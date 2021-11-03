@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 13:06:27 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/03 14:05:33 by zqadiri          ###   ########.fr       */
+/*   Created: 2021/11/03 14:07:03 by zqadiri           #+#    #+#             */
+/*   Updated: 2021/11/03 14:07:29 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-#define ITER_HPP
+#include "span.hpp"
 
-#include <iostream>
-#include <string>
-
-// void func ( void (*f)(int) );
-template <typename T>
-void    iter(T *array, int count, void (*func)(const T &)){
-    for (int i = 0; i < count; i++){
-        func(array[i]);
-    }   
+int main()
+{
+    // Span sp = Span(5);
+    // sp.addNumber(5);
+    // sp.addNumber(3);
+    // sp.addNumber(17);
+    // sp.addNumber(9);
+    // sp.addNumber(11);
+    // std::cout << sp.shortestSpan() << std::endl;
+    // std::cout << sp.longestSpan() << std::endl;
 }
-
-#endif
