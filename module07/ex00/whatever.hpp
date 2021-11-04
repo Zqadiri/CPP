@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:37:03 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/03 13:01:28 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/03 15:25:31 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,5 @@ template <typename Y>
 Y     max(Y &a, Y &b){
     return ((a > b) ? a : b);
 }
-
 
 #endif
