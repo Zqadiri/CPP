@@ -6,30 +6,30 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:14:14 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/07 19:25:13 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/05 15:53:20 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP_
+#ifndef  PHONEBOOK_HPP_
 # define PHONEBOOK_HPP_
 
 # include <iostream>
 # include <iomanip>
 # include "Contact.hpp"
 
-class phonebook
+class Phonebook
 {
-    private:
-        contact _contacts[8];
-        int  _bookmark;
-    public:
-        phonebook(void);
-        ~phonebook(void);
+	private:
+		Contact _Contacts[8];
+		int  _bookmark;
+	public:
+		Phonebook(void);
+		~Phonebook(void);
 
-    bool		add_contact(contact contact);
+	bool		add_Contact(Contact Contact);
 	void		print_full_list(void);
-    void        print_contact_by_index(int index);
-    void        search_command(contact contact);
+	void        print_Contact_by_index(int index);
+	void        search_command(Contact Contact);
 };
 
 # endif

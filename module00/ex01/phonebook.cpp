@@ -6,28 +6,31 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:12:07 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/08 12:20:47 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/05 15:55:26 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-phonebook::~phonebook(){};
+/*-- Constructors & Destructor --*/
 
-phonebook::phonebook(void){
+Phonebook::~Phonebook(void){
+}
+
+Phonebook::Phonebook(void){
     _bookmark = 0;
 }
 
-bool    phonebook::add_contact(contact contact)
+bool    Phonebook::add_Contact(Contact Contact)
 {
     if (_bookmark >= 8)
 	    return false;
-    _contacts[_bookmark] = contact;
+    _Contacts[_bookmark] = Contact;
     _bookmark++;
     return true;
 }
 
-void    phonebook::print_full_list(void)
+void    Phonebook::print_full_list(void)
 {
     std:: cout << std::setw(10)	<< "index"
 								<< "|"
@@ -38,14 +41,14 @@ void    phonebook::print_full_list(void)
 			   << std::setw(10) << "nickname" 
 								<< std::endl;
     for (int i = 0; i < _bookmark; i++)
-	    _contacts[i].print_contact(i);
+	    _Contacts[i].print_Contact(i);
 }
 
-void	phonebook::print_contact_by_index(int index)
+void	Phonebook::print_Contact_by_index(int index)
 {
 	for(int i = 0; i < _bookmark ; i++)
 	{
 		if (i == index)
-			_contacts[i].search_command(_contacts[i]);	
+			_Contacts[i].search_command(_Contacts[i]);	
 	}
 }

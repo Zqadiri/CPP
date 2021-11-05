@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:14:02 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/17 12:44:19 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/05 15:53:13 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <iomanip>
 # include <iostream>
 
-class contact
+class Contact
 {
 	/*
 		Member variables are private = encapsulation
@@ -34,8 +34,8 @@ class contact
 	/*
 	 constructor is a special type of member function of a class which initializes objects of a class
 	*/
-		contact(void);
-		contact(std::string fn, std::string ln, std::string nn, std::string pn, std::string ad) // PARAMETERIZED CONSTRUCTOR
+		Contact(void);
+		Contact(std::string fn, std::string ln, std::string nn, std::string pn, std::string ad) // PARAMETERIZED CONSTRUCTOR
 		{
 			_first_name = fn;
 			_last_name = ln;
@@ -46,11 +46,18 @@ class contact
 	/*
 	 we should write a destructor to release memory before the class instance is destroyed. This must be done to avoid memory leak.
 	*/
-		~contact(void);
+		~Contact(void);
+
+		std::string getName(void);
+		std::string getLastName(void);
+		std::string getNickname(void);
+		std::string getPhone(void);
+		std::string getAddress(void);
+
 		void	print_field(std::string field_name);
-		void	print_all_contacts(void);
-		void	print_contact(int index);
-		void	search_command(contact contact);
+		void	print_all_Contacts(void);
+		void	print_Contact(int index);
+		void	search_command(Contact Contact);
 };
 
 #endif

@@ -88,3 +88,9 @@ There are two major approaches to store real numbers
 
 > When you convert for example int(12) to unsigned float (12.0f)your processor needs to invoke some calculations as both numbers have different bit representations. This is what static_cast stands for. On the other hand, when you call reinterpret_cast the CPU does not invoke any calculations. It just treats a set of bits in the memory as if it had another type. So when you convert int* to float* with this keyword, the new value (after pointer dereferencing) has nothing to do with the old value in mathematical meaning.
 >
+
+/*-- Constructors & Destructor --*/
+
+/*-- Member functions --*/
+
+/*-- Accessors --*/

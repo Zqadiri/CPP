@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 13:22:36 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/21 16:03:54 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/05 17:45:28 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include"ClapTrap.hpp"
 
 /*	
-	https://www.geeksforgeeks.org/order-constructor-destructor-call-c/
+ https://www.geeksforgeeks.org/order-constructor-destructor-call-c/
 */
 
 class ScavTrap : public ClapTrap

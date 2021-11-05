@@ -6,13 +6,13 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 15:27:59 by zqadiri           #+#    #+#              #
-#    Updated: 2021/10/15 11:43:41 by zqadiri          ###   ########.fr        #
+#    Updated: 2021/11/05 16:12:01 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= ZombieHorde
 
-SRCS		=  Zombie.cpp ZombieHorde.cpp main.cpp
+SRCS		= Zombie.cpp ZombieHorde.cpp main.cpp
 
 INCLUDES	= Zombie.hpp 
 

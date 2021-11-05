@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 17:40:14 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/15 12:13:07 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/05 17:45:08 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 
 class   HumanA
 {
-    private:
-        std::string Name;
-        Weapon &weaponA;
-    public:
-        ~HumanA(void);
-        HumanA(std::string name, Weapon &weaponA);
-        void    attack(void);        
+	private:
+		std::string Name;
+		Weapon &weaponA;
+	public:
+		~HumanA(void);
+		HumanA(std::string name, Weapon &weaponA);
+		void    attack(void);        
 };
 
 #endif

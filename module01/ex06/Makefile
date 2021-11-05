@@ -5,16 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/08/29 18:11:15 by zqadiri           #+#    #+#              #
-#    Updated: 2021/11/05 15:46:22 by zqadiri          ###   ########.fr        #
+#    Created: 2021/10/10 16:57:26 by zqadiri           #+#    #+#              #
+#    Updated: 2021/11/05 17:50:29 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= yellow_Phonebook
+NAME		= karenFilter
 
-SRCS		= main.cpp PhoneBook.cpp Contact.cpp
-
-INCLUDES	= Contact.hpp PhoneBook.hpp
+SRCS		= main.cpp Karen.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
