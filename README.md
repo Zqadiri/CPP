@@ -5,6 +5,10 @@
 
 [Programmez avec le langage C++](https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c)
 
+## Tools:
+
+[C++ Insights](https://cppinsights.io/)
+
 ## Standard Library headers :
 
 [Understanding C++ - From source to binaries](https://www.daniweb.com/programming/software-development/tutorials/466177/understanding-c-from-source-to-binaries)
@@ -87,10 +91,28 @@ There are two major approaches to store real numbers
 **`reinterpret_cast`  vs `static_cast`**
 
 > When you convert for example int(12) to unsigned float (12.0f)your processor needs to invoke some calculations as both numbers have different bit representations. This is what static_cast stands for. On the other hand, when you call reinterpret_cast the CPU does not invoke any calculations. It just treats a set of bits in the memory as if it had another type. So when you convert int* to float* with this keyword, the new value (after pointer dereferencing) has nothing to do with the old value in mathematical meaning.
->
+> 
 
-/*-- Constructors & Destructor --*/
+## Templates:
 
-/*-- Member functions --*/
+[Templates in C++ - GeeksforGeeks](https://www.geeksforgeeks.org/templates-cpp/)
 
-/*-- Accessors --*/
+[Declare template once for multiple class or functions](https://stackoverflow.com/questions/25594885/declare-templatetypename-t-once-for-multiple-class-or-functions)
+
+[How do you pass a function as a parameter in C?](https://stackoverflow.com/questions/9410/how-do-you-pass-a-function-as-a-parameter-in-c)
+
+## Templated containers & Iterators :
+
+[Algorithm Library | C++ Magicians STL Algorithm - GeeksforGeeks](https://www.geeksforgeeks.org/c-magicians-stl-algorithms/)
+
+[A Description of the C++ typename keyword](http://pages.cs.wisc.edu/~driscoll/typename.html)
+
+[https://stackoverflow.com/questions/610245/where-and-why-do-i-have-to-put-the-template-and-typename-keywords?noredirect=1&lq=1](https://stackoverflow.com/questions/610245/where-and-why-do-i-have-to-put-the-template-and-typename-keywords?noredirect=1&lq=1)
+
+## Class Template :
+
+[Class template](https://en.cppreference.com/w/cpp/language/class_template)
+
+## Containers:
+
+[What are Containers/Adapters? C++](https://stackoverflow.com/questions/3873802/what-are-containers-adapters-c)
