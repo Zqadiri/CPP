@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:32 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/19 19:33:51 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/06 16:16:29 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ class Fixed
 	Fixed operator-(const Fixed &a);
 	Fixed operator/(const Fixed &a);
 
-	Fixed & operator++(void);
-	Fixed & operator--(void);
+	Fixed &operator++(void);
+	Fixed &operator--(void);
 	Fixed operator++(int);
 	Fixed operator--(int);
 	

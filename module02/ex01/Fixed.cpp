@@ -6,11 +6,13 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:37 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/17 12:47:58 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/06 14:37:56 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+/*-- Constructors & Destructor --*/
 
 Fixed::Fixed(void)
 {
@@ -43,33 +45,46 @@ Fixed::Fixed(const int i)
 	this->fixedPointValue = i << this->fractionalBits;
 }
 
-int Fixed::toInt( void ) const
-{
-	return (this->fixedPointValue / (1 << this->fractionalBits));
-}
-
 Fixed::Fixed(const float f)
 {
 	std::cout << "Float constructor called" << std::endl;
 	this->fixedPointValue = roundf(f * (1 << this->fractionalBits));
 }
 
+/*-- Menber functions --*/
+
 float Fixed::toFloat( void ) const{
 	
     return (((float)(this->fixedPointValue) / (1 << this->fractionalBits)));
 }
 
+int Fixed::toInt( void ) const
+{
+	return (this->fixedPointValue / (1 << this->fractionalBits));
+}
+
+
 /*
-	The purpose of the copy constructor and the assignment operator are almost equivalent -- 
-	both copy one object to another. However, the copy constructor initializes new objects,
-	whereas the assignment operator replaces the contents of existing objects
+ The purpose of the copy constructor and the assignment operator are almost equivalent -- 
+ both copy one object to another. However, the copy constructor initializes new objects,
+ whereas the assignment operator replaces the contents of existing objects
 */
+
+/*-- Operators --*/
 
 void    Fixed::operator=(const Fixed &obj)
 {
 	std::cout << "Assignation operator called " << std::endl;
 	this->fixedPointValue = obj.getRawBits();
 }
+
+std::ostream& operator<< (std::ostream& os, const Fixed & fix)
+{
+	os << fix.toFloat();
+	return os;
+}
+
+/*-- Accessors --*/
 
 int     Fixed::getRawBits(void) const{
 	std::cout << "getRawBits member function called" << std::endl;
@@ -78,10 +93,4 @@ int     Fixed::getRawBits(void) const{
 
 void    Fixed::setRawBits(int const raw){
 	this->fixedPointValue = raw;
-}
-
-std::ostream& operator<< (std::ostream& os, const Fixed & fix)
-{
-	os << fix.toFloat();
-	return os;
 }

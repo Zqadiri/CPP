@@ -116,3 +116,9 @@ There are two major approaches to store real numbers
 ## Containers:
 
 [What are Containers/Adapters? C++](https://stackoverflow.com/questions/3873802/what-are-containers-adapters-c)
+
+/*-- Constructors & Destructor --*/
+
+/*-- Operators --*/
+
+/*-- Menber functions --*/

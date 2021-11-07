@@ -6,7 +6,7 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/10 16:57:26 by zqadiri           #+#    #+#              #
-#    Updated: 2021/11/05 17:50:29 by zqadiri          ###   ########.fr        #
+#    Updated: 2021/11/06 14:35:46 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ OBJS		= $(SRCS:.cpp=.o)
 
 CC			= clang++
 
-FLAGS		= -Wall -Wextra -Werror
+FLAGS		= -Wall -Wextra -Werror -std=c++98
 
 all:		$(NAME)
 

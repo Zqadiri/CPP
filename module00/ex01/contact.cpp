@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/29 18:12:13 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/05 15:55:48 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/07 19:30:52 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,14 @@ Contact::Contact(void){
 
 Contact::~Contact(void){
 }
+
+Contact::Contact(std::string fn, std::string ln, std::string nn, std::string pn, std::string ad){
+  this->setName(fn);
+  this->setLastName(ln);
+  this->setNickname(nn);
+  this->setPhone(pn);
+  this->setAddress(ad);
+};
 
 /*-- Accessors --*/
 
@@ -41,6 +49,27 @@ std::string Contact::getPhone(void){
 std::string Contact::getAddress(void){
   return this->_address;
 }
+
+void	Contact::setName(std::string fn){
+  this->_first_name = fn;
+}
+
+void	Contact::setLastName(std::string ln){
+  this->_last_name = ln;
+}
+
+void	Contact::setNickname(std::string nn){
+  this->_nickname = nn;
+}
+
+void	Contact::setPhone(std::string pn){
+  this->_phone_number = pn;
+}
+
+void	Contact::setAddress(std::string ad){
+  this->_address = ad;
+}
+
 
 /*-- Member functions --*/
 

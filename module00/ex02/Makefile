@@ -6,10 +6,10 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 17:44:07 by zqadiri           #+#    #+#              #
-#    Updated: 2021/10/08 18:06:35 by zqadiri          ###   ########.fr        #
+#    Updated: 2021/11/06 14:35:46 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-       
+
 NAME		= recode
 
 SRCS		= Account.cpp tests.cpp
@@ -20,7 +20,7 @@ OBJS		= $(SRCS:.cpp=.o)
 
 CC			= clang++
 
-FLAGS		= -Wall -Wextra -Werror
+FLAGS		= -Wall -Wextra -Werror -std=c++98
 
 all:		$(NAME)
 

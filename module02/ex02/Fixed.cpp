@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:37 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/20 11:42:17 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/06 14:52:57 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,9 @@ float Fixed::toFloat( void ) const{
 }
 
 /*
-	The purpose of the copy constructor and the assignment operator are almost equivalent -- 
-	both copy one object to another. However, the copy constructor initializes new objects,
-	whereas the assignment operator replaces the contents of existing objects
+ The purpose of the copy constructor and the assignment operator are almost equivalent -- 
+ both copy one object to another. However, the copy constructor initializes new objects,
+ whereas the assignment operator replaces the contents of existing objects
 */
 
 int     Fixed::getRawBits(void) const{
@@ -76,8 +76,8 @@ void    Fixed::operator=(const Fixed &obj){
 }
 
 /*
-	The left-shift operator causes the bits in shift-expression to be shifted 
-	to the left by the number of positions specified by additive-expression
+ The left-shift operator causes the bits in shift-expression to be shifted 
+ to the left by the number of positions specified by additive-expression
 */
 
 std::ostream& operator<< (std::ostream& os, const Fixed & fix){
@@ -89,8 +89,8 @@ bool	Fixed::operator==(const Fixed& c1) const{
 	std::cout << "operator==" << std::endl;
 	return (this->getRawBits() == c1.getRawBits());
 }
-
 bool	Fixed::operator!=(const Fixed& c1) const{
+
 	std::cout << "operator!=" << std::endl;
 	return (!(this->getRawBits() == c1.getRawBits()));
 }
@@ -124,29 +124,25 @@ bool	Fixed::operator<= (const Fixed& c1) const{
 
 /*-------- Arithmetic operators --------*/
 
-Fixed Fixed::operator+(const Fixed &a)
-{
+Fixed Fixed::operator+(const Fixed &a){
 	Fixed rtn;
 	rtn.setRawBits(this->fixedPointValue + a.getRawBits());
 	return (rtn);
 }
 
-Fixed Fixed::operator*(const Fixed &a)
-{
+Fixed Fixed::operator*(const Fixed &a){
 	Fixed rtn;
 	rtn.setRawBits(this->fixedPointValue * a.getRawBits());
 	return (rtn);
 }
 
-Fixed Fixed::operator-(const Fixed &a)
-{
+Fixed Fixed::operator-(const Fixed &a){
 	Fixed rtn;
 	rtn.setRawBits(this->fixedPointValue - a.getRawBits());
 	return (rtn);
 }
 
-Fixed Fixed::operator/(const Fixed &a)
-{
+Fixed Fixed::operator/(const Fixed &a){
 	Fixed rtn;
 	rtn.setRawBits(this->fixedPointValue / a.getRawBits());
 	return (rtn);
@@ -162,33 +158,32 @@ Fixed Fixed::operator/(const Fixed &a)
 /*
 	Pre-increment and pre-decrement operators increments or decrements the value of the 
 	object and returns a reference to the result.
-	
 */
 
-
-Fixed & Fixed::operator++(void)
-{
+Fixed &Fixed::operator++(void){
 	this->fixedPointValue++;
 	return (*this);
 }
 
-Fixed & Fixed::operator--(void)
-{
+Fixed &Fixed::operator--(void){
 	this->fixedPointValue--;
 	return (*this);
 }
 
 /*
-	T T::operator++(int) => Postfix Increment
-	T T::operator++(int) => Postfix Decrement
+ T T::operator++(int) => Postfix Increment
+ T T::operator++(int) => Postfix Decrement
 */
 
 /*
-	Post-increment and post-decrement creates a copy of the object, increments or decrements 
-	value of the object and returns the copy from before the increment or decrement.
+ Post-increment and post-decrement creates a copy of the object, increments or decrements 
+ value of the object and returns the copy from before the increment or decrement.
 */
 
-// Fixed Fixed::operator++(int)
-// {
+Fixed Fixed::operator++(int){
 
-// }
+}
+
+Fixed Fixed::operator--(int){
+
+}
