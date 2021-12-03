@@ -1,37 +1,37 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    MAKEFILE.replace                                   :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/10 13:05:06 by zqadiri           #+#    #+#              #
-#    Updated: 2021/11/06 14:35:46 by zqadiri          ###   ########.fr        #
+#    Updated: 2021/12/03 16:53:15 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-done		= replace
+NAME		= replace
 
-SRCS		= main.cpp 
+SRCS		= main_.cpp 
 
 OBJS		= $(SRCS:.cpp=.o)
 
 CC			= clang++
 
-FLAGS		= -Wall -Wextra -Werror -std=c++98
+FLAGS		= -Wfind -Wextra -Werror -std=c++98
 
-all:		$(done)
+find:		$(NAME)
 
-$(done):	$(SRCS)
-			$(CC) $(FLAGS) $(SRCS) -o $(done)
+$(NAME):	$(SRCS)
+			$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:
 			rm -f $(OBJS)
 
 fclean:		clean
-			rm -f $(done)
+			rm -f $(NAME)
 
-re:			fclean $(done)
+re:			fclean $(NAME)
 
-.PHONY:		all clean fclean re
+.PHONY:		find clean fclean re

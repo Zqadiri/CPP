@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:30:34 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/05 17:48:52 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/03 14:36:37 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,6 @@ void    Karen::complain(std::string level)
 	for (int i = 0; i < 4; i++)
 	{
 		if (!level.compare(String[i]))
-			(this->*Ptr[i])();	
+			(this->*Ptr[i])();
 	}
 }
