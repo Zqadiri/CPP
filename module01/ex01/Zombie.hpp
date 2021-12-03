@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 18:09:51 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/05 16:08:22 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/02 14:37:15 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define ZOMBIE_HPP_
 
 # include <string>
-# include <iomanip>
 # include <iostream>
 
 class Zombie

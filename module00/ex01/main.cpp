@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:43:16 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/05 16:00:06 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/11/20 19:34:02 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ int			main(void)
 			std::cout << "Please enter the index you would like to see more informations of" << std::endl;
 			getline(std::cin, input);
 			try{
-			search_index = std::stoi(input);
-			}catch(std::exception &err){}
+			search_index = std::stoi(input);}
+			catch(std::exception &err){}
 			yellow_Phonebook.print_Contact_by_index(search_index);
 		}
 		else

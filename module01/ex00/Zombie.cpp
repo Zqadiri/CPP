@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 18:09:35 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/05 16:07:47 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/02 13:24:45 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,12 @@ Zombie::Zombie(void){
     std::cout << "Default Constructor" << std::endl;    
 }
 
-Zombie::Zombie(std::string name)
-{
-    std::cout << "Parametrized Constructor" << std::endl;
+Zombie::Zombie(std::string name){
     this->_name  = name;
     std::cout << name << " is OUT"  << std::endl;
 }
 
 Zombie::~Zombie(void){
-    std::cout << "Default Destructor" << std::endl;
     std::cout << this->_name << " is DEAD" << std::endl;
 }
 
