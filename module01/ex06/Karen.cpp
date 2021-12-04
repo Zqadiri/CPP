@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:30:34 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/05 18:50:09 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/04 21:10:48 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,37 @@ void    Karen::error(void){
  of executable code is commonly stored in a function pointer.
 */
 
+int	getLevel(std::string level)
+{
+	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	for (size_t i = 0; i < 4; i++)
+		if (!level.compare(levels[i]))
+			return i;
+	return -1;
+}
+
 void    Karen::complain(std::string level)
 {
 	fcnPtr Ptr[4] = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
-	std::string String[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	for (int i = 0; i < 4; i++)
+	switch (getLevel(level))
 	{
-		if (!level.compare(String[i]))
-			(this->*Ptr[i])();	
+		case 0:
+			for (size_t i = 0; i < 4; i++)
+				(this->*Ptr[i])();
+			break;
+		case 1:
+			for (size_t i = 1; i < 4; i++)
+				(this->*Ptr[i])();
+			break;
+		case 2:
+			for (size_t i = 2; i < 4; i++)
+				(this->*Ptr[i])();
+			break;
+		case 3:
+			for (size_t i = 3; i < 4; i++)
+				(this->*Ptr[i])();
+			break;	
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }

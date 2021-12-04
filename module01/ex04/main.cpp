@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_.cpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 14:02:41 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/12/03 16:55:10 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/04 20:51:43 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,20 @@ int     main(int argc, char *argv[])
 		}
 		output = megaphone(filename);
 		std::ofstream ofs(output);
+		if (!ofs.good()) 
+		{
+			std::cout << FILE_ERROR << std::endl;
+			return (EXIT_FAILURE);
+		}
 		size_t pos = 0;
 		while(std::getline(ifs, buffer))
 		{
-			while ((pos = buffer.find(string1)) >= 0 && pos != std::string::npos)
+			size_t index = 0;
+			while ((pos = buffer.find(string1, index)) >= 0 && pos != std::string::npos)
 			{
-				buffer.erase(pos, string1.size());
+				buffer.erase(pos, string1.length());
 				buffer.insert(pos, string2);
+				index = pos+string1.length();
 			}
 			ofs << buffer << std::endl;
 		}

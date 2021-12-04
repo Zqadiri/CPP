@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:52:08 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/21 12:26:00 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/04 18:00:42 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ class ClapTrap
         ClapTrap(std::string _name);
         ClapTrap(const ClapTrap &);
 
-        ClapTrap    &operator=(const ClapTrap &obj);
+        // ClapTrap    &operator=(const ClapTrap &obj);
+       void operator=(const ClapTrap &obj);
         
         std::string getName(void);
         unsigned int getHitPoints(void);
