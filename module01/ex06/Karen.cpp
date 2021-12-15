@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:30:34 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/12/04 21:10:48 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/14 23:07:51 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,13 +75,13 @@ void    Karen::complain(std::string level)
 	switch (getLevel(level))
 	{
 		case 0:
-			for (size_t i = 0; i < 4; i++)
-				(this->*Ptr[i])();
-			break;
+			// for (size_t i = 0; i < 4; i++)
+				(this->*Ptr[0])();
+			// break;
 		case 1:
-			for (size_t i = 1; i < 4; i++)
-				(this->*Ptr[i])();
-			break;
+			// for (size_t i = 1; i < 4; i++)
+				(this->*Ptr[1])();
+			// break;
 		case 2:
 			for (size_t i = 2; i < 4; i++)
 				(this->*Ptr[i])();

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 14:02:41 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/12/04 20:51:43 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/14 00:23:08 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 #define ERROR "* ARGUMENT ERROR *"
 #define FILE_ERROR "* BAD FILE *"
 
-
-
 std::string		megaphone(std::string filename)
 {
 	std::string output;
@@ -28,15 +26,8 @@ std::string		megaphone(std::string filename)
 	return (output);
 }
 
-int     main(int argc, char *argv[])
+int	replace(char *argv[])
 {
-	if (argc != 4)
-	{
-		std::cout << ERROR << std::endl;
-		return (EXIT_FAILURE);
-	}
-	else
-	{
 		std::string filename(argv[1]);
 		std::string string1(argv[2]);
 		std::string string2(argv[3]);
@@ -69,6 +60,17 @@ int     main(int argc, char *argv[])
 		}
 		ifs.close();
 		ofs.close();
+		return(EXIT_SUCCESS);
+}
+
+int     main(int argc, char *argv[])
+{
+	if (argc != 4)
+	{
+		std::cout << ERROR << std::endl;
+		return (EXIT_FAILURE);
 	}
-	return (1);
+	if (replace(argv))
+		return(EXIT_FAILURE);
+	return (EXIT_SUCCESS);
 }

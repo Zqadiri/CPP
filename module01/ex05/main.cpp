@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:30:37 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/05 17:48:59 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/14 23:05:38 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(void)
 	Karen karen;
 
 	karen.complain("DEBUG");
-	karen.complain("DEBUG");
-	karen.complain("DEBUG");
+	karen.complain("INFOfgr");
+	// karen.complain("DEBUG");
 	return (0);
 }

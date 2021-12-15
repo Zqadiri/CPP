@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:32 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/16 19:33:30 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/08 16:58:19 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Fixed
 {
  	private:
 		int fixedPointValue;
-		static const int fractionalBits = 8;
+		static const int fractionalBits = 16;
 	public:
 		Fixed(void);
 		~Fixed(void);
