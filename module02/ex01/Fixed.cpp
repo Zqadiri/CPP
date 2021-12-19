@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:37 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/06 14:37:56 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/16 13:18:51 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,23 +63,14 @@ int Fixed::toInt( void ) const
 	return (this->fixedPointValue / (1 << this->fractionalBits));
 }
 
-
-/*
- The purpose of the copy constructor and the assignment operator are almost equivalent -- 
- both copy one object to another. However, the copy constructor initializes new objects,
- whereas the assignment operator replaces the contents of existing objects
-*/
-
 /*-- Operators --*/
 
-void    Fixed::operator=(const Fixed &obj)
-{
+void    Fixed::operator=(const Fixed &obj){
 	std::cout << "Assignation operator called " << std::endl;
 	this->fixedPointValue = obj.getRawBits();
 }
 
-std::ostream& operator<< (std::ostream& os, const Fixed & fix)
-{
+std::ostream& operator<< (std::ostream& os, const Fixed & fix){
 	os << fix.toFloat();
 	return os;
 }

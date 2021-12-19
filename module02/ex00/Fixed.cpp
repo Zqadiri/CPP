@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 12:54:22 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/06 14:33:20 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/16 12:58:21 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ Fixed::~Fixed(void){
 }
 
 /*
- A copy constructor is a member function that initializes an 
- object using another object of the same class.
+	The copy constructor is for creating a new object. It copies an existing 
+	object to a newly constructed object.The copy constructor
+ 	is used to initialize a new instance from an old instance.
 */
 
 Fixed::Fixed(const Fixed &obj)
@@ -37,15 +38,16 @@ Fixed::Fixed(const Fixed &obj)
 /*-- Operators --*/
 
 /*
- The purpose of the copy constructor and the assignment operator are almost equivalent -- 
- both copy one object to another. However, the copy constructor initializes new objects,
- whereas the assignment operator replaces the contents of existing objects
+	An assignment operator is used to replace the data of a previously 
+	initialized object with some other object's data.
+	NOTE: A reference gets returned. This enables chain assignments like in `c = a = b`
 */
 
-void    Fixed::operator=(const Fixed &obj)
+Fixed 	&Fixed::operator=(const Fixed &obj)
 {
 	std::cout << "Assignation operator called " << std::endl;
 	this->fixedPointValue = obj.getRawBits();
+	return (*this);
 }
 
 /*-- Menber functions --*/

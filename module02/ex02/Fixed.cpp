@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:37 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/06 14:52:57 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/19 15:28:03 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,45 +68,36 @@ void    Fixed::setRawBits(int const raw){
 	this->fixedPointValue = raw;
 }
 
-/*-------- overloading operators --------*/
+//*----------------- overloading operators -------------------*//
 
 void    Fixed::operator=(const Fixed &obj){
-	std::cout << "Assignation operator called " << std::endl;
+	// std::cout << "Assignation operator called " << std::endl;
 	this->fixedPointValue = obj.getRawBits();
 }
 
-/*
- The left-shift operator causes the bits in shift-expression to be shifted 
- to the left by the number of positions specified by additive-expression
-*/
+// Overload output operator << to print values for user defined datatypes
 
 std::ostream& operator<< (std::ostream& os, const Fixed & fix){
 	os << fix.toFloat();
 	return os;
 }
 
+	//?-------- Relational operators ---------?//
+
 bool	Fixed::operator==(const Fixed& c1) const{
-	std::cout << "operator==" << std::endl;
 	return (this->getRawBits() == c1.getRawBits());
 }
-bool	Fixed::operator!=(const Fixed& c1) const{
 
-	std::cout << "operator!=" << std::endl;
+bool	Fixed::operator!=(const Fixed& c1) const{
 	return (!(this->getRawBits() == c1.getRawBits()));
 }
 
 bool	Fixed::operator> (const Fixed& c1) const{
-	std::cout << "operator>" << std::endl;
 	return (this->getRawBits() > c1.getRawBits());
 }
 
 bool	Fixed::operator>=(const Fixed & a) const{
-	std::cout << "operator>=" << std::endl;
-	if (this->getRawBits() > a.getRawBits())
-		return true;
-	else if (this->getRawBits() == a.getRawBits())
-		return true;
-	return false; 
+	return (this->getRawBits() >= a.getRawBits());
 }
 
 bool	Fixed::operator< (const Fixed& c1) const{
@@ -114,50 +105,40 @@ bool	Fixed::operator< (const Fixed& c1) const{
 }
 
 bool	Fixed::operator<= (const Fixed& c1) const{
-	std::cout << "operator<=" << std::endl;
-	if (this->getRawBits() < c1.getRawBits())
-		return true;
-	else if (this->getRawBits() == c1.getRawBits())
-		return true;
-	return false; 
+	return (this->getRawBits() <= c1.getRawBits());
 }
 
-/*-------- Arithmetic operators --------*/
+	//?-------- Arithmetic operators --------?//
 
-Fixed Fixed::operator+(const Fixed &a){
+Fixed Fixed::operator+(const Fixed &a) const{
 	Fixed rtn;
 	rtn.setRawBits(this->fixedPointValue + a.getRawBits());
 	return (rtn);
 }
 
-Fixed Fixed::operator*(const Fixed &a){
+Fixed Fixed::operator*(const Fixed &a)const {
 	Fixed rtn;
 	rtn.setRawBits(this->fixedPointValue * a.getRawBits());
 	return (rtn);
 }
 
-Fixed Fixed::operator-(const Fixed &a){
+Fixed Fixed::operator-(const Fixed &a)const {
 	Fixed rtn;
 	rtn.setRawBits(this->fixedPointValue - a.getRawBits());
 	return (rtn);
 }
 
-Fixed Fixed::operator/(const Fixed &a){
+Fixed Fixed::operator/(const Fixed &a)const {
 	Fixed rtn;
 	rtn.setRawBits(this->fixedPointValue / a.getRawBits());
 	return (rtn);
 }
 
-/*-------- overloading postfix and prefix operators --------*/
+	//?----- overloading postfix and prefix operators ----?//
 
 /*
-	T& T::operator++()	=> Prefix Increment
-	T& T::operator--()	=> Prefix Decrement
-*/
-
-/*
-	Pre-increment and pre-decrement operators increments or decrements the value of the 
-	object and returns a reference to the result.
+**	T& T::operator++()	=> Prefix Increment
+**	T& T::operator--()	=> Prefix Decrement
 */
 
 Fixed &Fixed::operator++(void){
@@ -181,9 +162,36 @@ Fixed &Fixed::operator--(void){
 */
 
 Fixed Fixed::operator++(int){
-
+	Fixed tmp = *this;
+	operator++();
+	return (tmp);
 }
 
 Fixed Fixed::operator--(int){
-
+	Fixed tmp = *this;
+	operator--();
+	return (tmp);
 }
+
+	//?----------- Static Member Functions --------------?//
+
+/*
+	the keyword static declares members that are not bound to class instances
+*/
+
+ Fixed& Fixed::min(Fixed& u, Fixed& v){
+	return ((u > v) ? v : u);
+}
+
+ const Fixed&  Fixed::min (const Fixed &u, const Fixed &v){
+	return ((u > v) ? v : u);
+}
+
+ Fixed&  Fixed::max(Fixed& u, Fixed& v){
+	return ((u > v) ? u : v);
+}
+
+ const Fixed&  Fixed::max(const Fixed &u, const Fixed &v){
+	return ((u > v) ? u : v);	
+}
+

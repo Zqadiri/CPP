@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 12:56:07 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/15 15:06:47 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/16 12:58:13 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Fixed
 	  
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
-	void operator= (const Fixed &obj);
+	Fixed &operator= (const Fixed &obj);
 };
 
 #endif

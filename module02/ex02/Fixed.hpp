@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:32 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/06 16:16:29 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/19 15:26:34 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class Fixed
 	float toFloat( void ) const;
 	int toInt( void ) const;
 	void operator= (const Fixed &obj);
+	
 	bool operator== ( const Fixed  &a) const;
 	bool operator!= (const Fixed& c1) const;
 	bool operator> (const Fixed& c1) const;
@@ -41,15 +42,20 @@ class Fixed
 	bool operator< (const Fixed& c1) const;
 	bool operator<= (const Fixed& c1) const;
 	
-	Fixed operator+(const Fixed &a);
-	Fixed operator*(const Fixed &a);
-	Fixed operator-(const Fixed &a);
-	Fixed operator/(const Fixed &a);
+	Fixed operator+(const Fixed &a) const ;
+	Fixed operator*(const Fixed &a) const ;
+	Fixed operator-(const Fixed &a) const ;
+	Fixed operator/(const Fixed &a) const ;
 
 	Fixed &operator++(void);
 	Fixed &operator--(void);
 	Fixed operator++(int);
 	Fixed operator--(int);
+
+	static Fixed &min(Fixed&, Fixed&);
+	static const Fixed &min(const Fixed &, const Fixed &);
+	static Fixed &max(Fixed&, Fixed&);
+	static const Fixed &max (const Fixed &, const Fixed &);
 	
 };
 
