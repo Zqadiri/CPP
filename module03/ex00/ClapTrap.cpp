@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:52:06 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/01/31 11:44:03 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/20 18:44:12 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ unsigned int ClapTrap::getAttackDamage(void){
 	return (this->_attack_damage);
 }
 
-/*----- Constructor & Destructor -----*/
+/*----- Functions -----*/
 
 void ClapTrap::attack(std::string const & target)
 {

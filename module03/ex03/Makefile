@@ -6,17 +6,17 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 11:50:20 by zqadiri           #+#    #+#              #
-#    Updated: 2021/11/06 14:35:46 by zqadiri          ###   ########.fr        #
+#    Updated: 2022/02/20 19:15:48 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	FragTrap
+NAME		=	DimondTrap
 
 SRCS		=  ClapTrap.cpp main.cpp  ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
-CC			= clang++
+CC			= c++
 
 FLAGS		= -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
 

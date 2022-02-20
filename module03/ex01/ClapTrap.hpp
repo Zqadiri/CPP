@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:52:08 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/12/24 15:47:04 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/20 18:55:11 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class ClapTrap
 		unsigned int _hit_points;
 		unsigned int _energy_points;
 		unsigned int _attack_damage;
-		
 		
 	public:
 

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 20:11:49 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/21 12:25:29 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/20 19:18:46 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ DiamondTrap & DiamondTrap::operator=(const DiamondTrap &obj)
 }
 
 void DiamondTrap::whoAmI(){
-    std::cout << "DiamondTrap's name :"<< this->_name << std::endl;
-    std::cout << "ClapTrap's name :"<< ClapTrap::getName() << std::endl;
+    std::cout << "DiamondTrap's name : "<< this->_name << std::endl;
+    std::cout << "ClapTrap's name : "<< ClapTrap::getName() << std::endl;
 
 }
 
