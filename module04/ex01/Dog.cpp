@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:55:28 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/22 13:15:45 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/21 17:45:39 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 Dog::Dog(void){
 	std::cout << "Dog Default Constructor Called" << std::endl;
 	this->brain = new Brain();
+	brain->setIdeas("7mara");
 }
 
 Dog::~Dog(void){

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 12:30:13 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/21 16:45:41 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/24 14:10:00 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,11 @@ class Animal
 	public:
 		Animal();
 		~Animal();
-		Animal(std::string type);
+
 		Animal(const Animal&);
 		Animal	&operator=(const Animal &obj);
-		virtual std::string	getType(void) const;
+		std::string	getType(void) const;
 		virtual void	makeSound() const;
 };
 
 #endif
-

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:37 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/12/16 13:18:51 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/23 21:21:16 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ Fixed::Fixed(const float f)
 
 float Fixed::toFloat( void ) const{
 	
-    return (((float)(this->fixedPointValue) / (1 << this->fractionalBits)));
+    return (((float)(this->fixedPointValue) /1 this->fractionalBits)));
 }
 
 int Fixed::toInt( void ) const

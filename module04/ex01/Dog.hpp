@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:56:10 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/22 12:59:52 by zqadiri          ###   ########.fr       */
+/*   Updated: 2021/12/21 17:48:39 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Dog : public Animal
 	private:
 		Brain *brain;
 	public:
+	//! 7aydi Animal(std::string type);....
 		Dog(void);
 		~Dog(void);
 		Dog(std::string);
@@ -30,7 +31,7 @@ class Dog : public Animal
 		void	makeSound(void)const;
 
 		Brain *getBrain( void );
-		void setBrain(std::string str);		
+		void setBrain(std::string str);
 };
 
 #endif
