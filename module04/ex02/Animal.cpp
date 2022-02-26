@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 12:30:11 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/22 17:07:37 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/26 17:30:23 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,6 @@ Animal::Animal(const Animal& animal)
 {
 	std::cout << "Copy Constructor Called" << std::endl;
 	*this = animal;
-}
-
-Animal::Animal(std::string type)
-{
-	std::cout << "Parameterized Constructor Called" << std::endl;
-	this->_type = type;
 }
 
 /*-- Operator --*/

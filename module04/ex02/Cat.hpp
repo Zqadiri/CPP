@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:40:48 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/22 13:06:27 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/24 16:58:00 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class Cat : public Animal
 	public:
 		Cat(void);
 		~Cat(void);
-		Cat(std::string);
 		Cat(const Cat &);
 
 	Cat	&operator=(const Cat &obj);
