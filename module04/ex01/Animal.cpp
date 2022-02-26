@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 12:30:11 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/22 13:10:13 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/24 16:57:13 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 /*-- Constructors & Destructor --*/
 
-Animal::Animal()
-{
+Animal::Animal(){
 	std::cout << "Animal Default Constructor Called" << std::endl;
+	this->_type = "Animal";
 }
 
-Animal::~Animal()
-{
+Animal::~Animal(){
 	std::cout << "Animal Default Destructor Called" << std::endl;
 }
 
@@ -30,13 +29,7 @@ Animal::Animal(const Animal& animal)
 	*this = animal;
 }
 
-Animal::Animal(std::string type)
-{
-	std::cout << "Animal Parameterized Constructor Called" << std::endl;
-	this->_type = type;
-}
-
-/*-- Operator --*/
+/*-- Operators --*/
 
 Animal	&Animal::operator=(const Animal &obj)
 {

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:40:47 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/22 13:09:18 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/24 16:58:36 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,13 @@
 
 Cat::Cat(void){
 	std::cout << "Cat Default Constructor Called" << std::endl;
+	this->_type = "Cat";
 	this->brain = new Brain();
 }
 
 Cat::~Cat(void){
 	std::cout << "Cat Default Destructor Called" << std::endl;
 	delete this->brain;
-}
-
-Cat::Cat(std::string type) : Animal(type){
-	std::cout << "Cat Parameterized Constructor Called" << std::endl;
-	this->_type = type;
-	this->brain = new Brain();
 }
 
 Cat::Cat(const Cat &c) : Animal(c){

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:33 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/12/19 16:16:22 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/22 20:05:24 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main( void )
 {
 	Fixed a;
-	Fixed const b(10);
+	Fixed const b(Fixed(5.05f) * Fixed(2));
 	Fixed const c(42.42f);
 	Fixed const d(b);
 

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 13:05:37 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/12/19 15:28:03 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/22 20:06:52 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ Fixed Fixed::operator+(const Fixed &a) const{
 
 Fixed Fixed::operator*(const Fixed &a)const {
 	Fixed rtn;
-	rtn.setRawBits(this->fixedPointValue * a.getRawBits());
+	rtn.setRawBits((this->fixedPointValue * a.getRawBits()) /(1 << 8));
 	return (rtn);
 }
 

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:40:48 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/12/21 17:48:34 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/24 16:58:00 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ class Cat : public Animal
 	private:
 		Brain *brain;
 	public:
-		//! 7aydi Animal(std::string type);....
 		Cat(void);
 		~Cat(void);
-		Cat(std::string);
 		Cat(const Cat &);
 
 	Cat	&operator=(const Cat &obj);

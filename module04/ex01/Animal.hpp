@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 12:30:13 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/12/21 17:37:47 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/24 16:56:43 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,8 @@ class Animal
 		std::string _type;
 
 	public:
-		//! 7aydi Animal(std::string type);....
 		Animal();
 		virtual ~Animal();
-		Animal(std::string type);
 		Animal(const Animal&);
 		Animal	&operator=(const Animal &obj);
 		std::string	getType(void) const;
