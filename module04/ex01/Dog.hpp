@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:56:10 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/26 12:46:44 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/26 13:10:44 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Dog : public Animal
 	public:
 		Dog(void);
 		~Dog(void);
-		Dog(std::string);
 		Dog(const Dog &);
 
 		Dog	&operator=(const Dog &obj);
