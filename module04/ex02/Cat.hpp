@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:40:48 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/24 16:58:00 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 11:08:24 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cat : public Animal
 		Brain *brain;
 	public:
 		Cat(void);
-		~Cat(void);
+		virtual ~Cat(void);
 		Cat(const Cat &);
 
 	Cat	&operator=(const Cat &obj);

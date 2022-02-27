@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:56:10 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/26 13:10:44 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 11:04:35 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ class Dog : public Animal
 		Brain *brain;
 	public:
 		Dog(void);
-		~Dog(void);
+		virtual ~Dog(void);
 		Dog(const Dog &);
 
 		Dog	&operator=(const Dog &obj);
 		std::string getType(void) const;
 		void	makeSound(void)const;
 
-		Brain *getBrain( void );
+		Brain *getBrain( void )const;
 		void setBrain(std::string str);
 };
 

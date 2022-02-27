@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 12:54:56 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/12/16 13:01:02 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 10:51:45 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int main(void)
 {
     Fixed a;
     Fixed b(a);
-    Fixed c;
-    c = b;
+    Fixed c = b;
+    // c = b;
     std::cout << a.getRawBits() << std::endl;
     std::cout << b.getRawBits() << std::endl;
     std::cout << c.getRawBits() << std::endl;

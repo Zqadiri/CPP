@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 12:29:09 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/26 18:23:57 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 10:56:00 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,17 @@ int main(void)
 		std::cout << cat->getBrain()->getIdea(2) << std::endl;
 
 		Cat cat2(*cat); //copy constructor
+		
+		Cat cat3;
+		cat3 = cat2; //AsSignement Operator
 
+		cat3.getBrain()->setIdeas("newer Cat's Idea");
+		
 		cat2.getBrain()->setIdeas("new Cat's Idea");
 		
-		std::cout << "NEW Idea : " <<cat2.getBrain()->getIdea(2) << std::endl;
 		std::cout << "OLD Idea : " <<cat->getBrain()->getIdea(2) << std::endl;
+		std::cout << "NEW Idea : " <<cat2.getBrain()->getIdea(2) << std::endl;
+		std::cout << "NEWER Idea : " <<cat3.getBrain()->getIdea(2) << std::endl;
 
 		delete meta;
 		delete cat;
@@ -58,5 +64,9 @@ int main(void)
 			delete animals[i];
 		// system("leaks Animal");
 	}
+	// Dog basic;
+	// {
+	// 	Dog tmp = basic; 
+	// }
 	return EXIT_SUCCESS;
 }
