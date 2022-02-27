@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:15:57 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/23 15:16:00 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 15:10:09 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,21 @@ class Bureaucrat
 		Bureaucrat &operator=(const Bureaucrat&);
 		
 		std::string	getName(void) const;
-		int	getGrade(void)const;
+		int	getGrade(void) const;
 
 		void	increment(void);
 		void	decrement(void);
 
 		class GradeTooHighException : public std::exception{
 		public:
-			const char * what () const throw () {
+			virtual const char * what () const throw () {
 	  			return "GradeTooHigh";
    			}
 		};
+
 		class GradeTooLowException : public std::exception{
 		public:
-			const char * what () const throw () {
+			virtual const char * what () const throw () {
 	  			return "GradeTooLow";
 			}
 		};

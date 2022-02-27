@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 15:23:55 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/26 14:59:28 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 17:47:33 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;
+
 class Form
 {
 	private:
-		std::string _name;
-		bool		_singed;
-		int			_grade_to_sign;
-		int			_grade_to_exec;
+		const std::string 	_name;
+		bool				_singed;
+		const int			_grade_to_sign;
+		const int			_grade_to_exec;
 	public:
 		Form();
 		~Form();

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:16:00 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/23 15:22:03 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 15:18:58 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,26 @@
 /*-- Constructor & Destructor --*/
 
 Bureaucrat::Bureaucrat(){
-	std::cout << "Default Constructor" << std::endl;   
+	std::cout << "Bureaucrat Default Constructor" << std::endl;
 }
 
 Bureaucrat::~Bureaucrat(){
-	std::cout << "Default Destructor" << std::endl;
+	std::cout << "Bureaucrat Default Destructor" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade)
+Bureaucrat::Bureaucrat(std::string name, int grade): _name(name)
 {
-	std::cout << "Parameterized Constructor" << std::endl;
+	std::cout << "Bureaucrat Parameterized Constructor" << std::endl;
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
-	this->_name = name;
 	this->_grade = grade;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &b)
 {
-	std::cout << "copy Constructor" << std::endl;
+	std::cout << "Bureaucrat copy Constructor" << std::endl;
 	*this = b;
 }
 
@@ -43,13 +42,11 @@ Bureaucrat::Bureaucrat(const Bureaucrat &b)
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &b)
 {
-	std::cout << " = Operator " << std::endl;
-	this->_name = b._name;
+	std::cout << "Bureaucrat  = Operator " << std::endl;
 	this->_grade = b._grade;
 	return (*this);
 }
 
-// <name>, bureaucrat grade <grade>.
 std::ostream &operator<< (std::ostream& oc, Bureaucrat const &b)
 {
 	std::cout << b.getName() << ", bureaucrat grade " << b.getGrade();
@@ -76,7 +73,7 @@ void	Bureaucrat::decrement(void){
 }
 
 void	Bureaucrat::increment(void){
-	if (this->_grade < 1){
+	if (this->_grade < 2){
 		throw Bureaucrat::GradeTooHighException();
 	}
 	this->_grade--;

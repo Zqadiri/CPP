@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:15:57 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/26 15:14:55 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 17:52:29 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <exception>
 #include "Form.hpp"
 
-class Form; /*forward declaration*/
+class Form;
 
 class Bureaucrat
 {
@@ -34,25 +34,26 @@ class Bureaucrat
 		Bureaucrat &operator=(const Bureaucrat&);
 		
 		std::string	getName(void) const;
-		int	getGrade(void)const;
+		int	getGrade(void) const;
 
 		void	increment(void);
 		void	decrement(void);
 
+		void	signForm(Form &f);
+
 		class GradeTooHighException : public std::exception{
 		public:
-			const char * what () const throw () {
+			virtual const char * what () const throw () {
 	  			return "GradeTooHigh";
    			}
 		};
+
 		class GradeTooLowException : public std::exception{
 		public:
-			const char * what () const throw () {
+			virtual const char * what () const throw () {
 	  			return "GradeTooLow";
 			}
 		};
-
-		void	signForm(Form &);
 };
 
 std::ostream & operator<< (std::ostream&, Bureaucrat const &);

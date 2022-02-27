@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:15:57 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/10/26 15:14:55 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 18:10:25 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ class Bureaucrat
 		};
 
 		void	signForm(Form &);
+		void	executeForm(Form const & form);
 };
 
 std::ostream & operator<< (std::ostream&, Bureaucrat const &);

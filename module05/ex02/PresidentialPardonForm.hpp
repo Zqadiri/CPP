@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:02:54 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/02 10:12:51 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 18:14:41 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,16 @@
 
 class PresidentialPardonForm : public Form
 {
-    private:
-        std::string     target;
-    public:
-        PresidentialPardonForm();
-        ~PresidentialPardonForm();
-        PresidentialPardonForm(std::string);
-        PresidentialPardonForm(const PresidentialPardonForm&);
-        PresidentialPardonForm  &operator=(const PresidentialPardonForm&);
+	private:
+		std::string		target;
+	public:
+		PresidentialPardonForm();
+		~PresidentialPardonForm();
+		PresidentialPardonForm(std::string);
+		PresidentialPardonForm(const PresidentialPardonForm&);
+		PresidentialPardonForm  &operator=(const PresidentialPardonForm&);
 
-        void    execute(Bureaucrat const &) const;
+		void    execute(Bureaucrat const &) const;
 };
-
-
-
 
 #endif

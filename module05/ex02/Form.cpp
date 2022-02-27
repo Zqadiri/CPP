@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 15:23:52 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/02 10:16:57 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 17:56:54 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,50 +14,46 @@
 
 /*-- Constructor & Destructor --*/
 
-Form::Form(){
-	std::cout << "Default Constructor" << std::endl;      
+Form::Form(): _name(), _grade_to_sign(), _grade_to_exec(){
+	std::cout << "Form Default Constructor" << std::endl;      
 }
 
 Form::~Form(){
-	std::cout << "Default Destructor" << std::endl;
+	std::cout << "Form Default Destructor" << std::endl;
 }
 
-Form::Form(std::string n, int sign, int exec)
+Form::Form(std::string name, int sign, int exec) : _name(name), _grade_to_sign(sign), _grade_to_exec(exec)
 {
-	std::cout << "Parameterized Constructor" << std::endl;
 	this->_singed = 0;
+	std::cout << "Form Parameterized Constructor" << std::endl;
 	if (sign > 150 || exec > 150)
 		throw Form::GradeTooLowException();
 	if (sign < 1 || exec < 1)
 		throw Form::GradeTooHighException();
-	this->_name = n;
-	this->_grade_to_sign = sign;
-	this->_grade_to_exec = exec;
 }
 
-Form::Form(const Form &f)
+Form::Form(const Form &f): _name(f._name), _grade_to_sign(f._grade_to_sign), _grade_to_exec(f._grade_to_exec)
 {
-	std::cout << "copy Constructor" << std::endl;
-	  *this = f;  
+	std::cout << "Form copy Constructor" << std::endl;
+	*this = f;  
 }
 
 /*-- Operators --*/
 
 Form    &Form::operator=(const Form& f)
 {
-	std::cout << " = Operator " << std::endl;
-	this->_name = f._name;
+	std::cout << "Form = Operator " << std::endl;
 	this->_singed = f._singed;
-	this->_grade_to_sign = f._grade_to_sign;
-	this->_grade_to_exec = f._grade_to_exec;
 	return (*this);
 }
 
-std::ostream    &operator<<(std::ostream &o, const Form &f)
+std::ostream    &operator<<(std::ostream &os, const Form &f)
 {
-	std::cout << f.getName() << f.getSigned() << f.getGradetoExec() 
-				<< f.getGradetoSign() << std::endl;
-	return (o);
+	std::cout << "Form's name : " << f.getName() <<std::endl;
+	std::cout << "Is signed : " << f.getSigned() << std::endl;
+	std::cout << "Grade required to Execute : " << f.getGradetoExec() << std::endl;
+	std::cout << "Grade required to Signe : " << f.getGradetoSign() << std::endl;
+	return (os);
 }
 
 /*-- Accessors --*/
@@ -89,9 +85,11 @@ void    Form::beSigned(Bureaucrat &b)
 	}
 	if (b.getGrade() > this->getGradetoSign())
 	{
-		std::cout << "This Form can not be signed :";
+		std::cout << "This Form can not be signed " << std::endl;
 		throw Form::GradeTooLowException();	
 	}
-	else
+	else{
+		std::cout << "Form signed ! " << std::endl;
 		this->_singed = 1;
+	}
 }

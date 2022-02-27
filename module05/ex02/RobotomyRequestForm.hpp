@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:03:00 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/02 11:29:29 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/27 18:14:43 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 class RobotomyRequestForm : public Form
 {
     private:
-        std::string target;
+        std::string     target;
     public:
         RobotomyRequestForm();
         ~RobotomyRequestForm();

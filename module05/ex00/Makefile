@@ -6,7 +6,7 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/22 18:15:50 by zqadiri           #+#    #+#              #
-#    Updated: 2021/11/06 14:35:46 by zqadiri          ###   ########.fr        #
+#    Updated: 2022/02/27 11:58:06 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS		= Bureaucrat.cpp main.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
-CC			= clang++
+CC			= c++
 
 FLAGS		= -Wall -Wextra -Werror -std=c++98
 
