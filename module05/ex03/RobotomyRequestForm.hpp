@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:03:00 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 18:14:43 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/28 11:18:48 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class RobotomyRequestForm : public Form
 
         RobotomyRequestForm &operator=(const RobotomyRequestForm&);
 
+        // std::string     getTarget(void);
         void    execute(Bureaucrat const &b)const;
 };
 

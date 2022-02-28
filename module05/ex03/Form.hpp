@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 15:23:55 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 19:23:59 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/28 12:30:56 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ class Form
 	  			return "GradeTooHigh";
    			}
 		};
+
 		class	GradeTooLowException : public std::exception{
 			public:
 				virtual const char * what () const throw () {

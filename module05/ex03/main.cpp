@@ -6,63 +6,38 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:15:55 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 19:13:32 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/28 12:34:00 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Intern.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
 int main (void)
 {
-	{
-		std::cout << "\n--- Test For Shrubbery Form ---\n" << std::endl;
-		try
-		{
-			Bureaucrat b("B-one", 136);
-			ShrubberyCreationForm sh("target");
-			sh.execute(b);
-			sh.beSigned(b);
-			std::cout << "Before decrementing : "<< b << std::endl;
-			b.decrement();
-			std::cout << "After decrementing : " << b << std::endl;
-		}
-		catch (std::exception &e){
-			std::cout << e.what() << std::endl;
-		}
-	}
-	{
-		std::cout << "\n--- Test For Robotomy Form ---\n" << std::endl;
-		try
-		{
-			Bureaucrat b("B-one", 76);
-			RobotomyRequestForm rb("target");
-			// rb.execute(b);
-			// b.executeForm(rb);
-			b.signForm(rb);
-			rb.beSigned(b);
-			std::cout << "Before incrementing : "<< b << std::endl;
-			b.increment();
-			std::cout << "After incrementing : " << b << std::endl;
-			rb.execute(b);
+	Intern someRandomIntern;
+	Form* rrf;
 
-		}
-		catch (std::exception &e){
-			std::cout << e.what() << std::endl;
-		}
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	std::cout << "Type of the form : " << rrf->getName() << std::endl;
+	{
+		Intern someRandomIntern;
+		Form *ret;
+
+		ret = someRandomIntern.makeForm("shrubbery creation", "form");
+		ret->execute(Bureaucrat());
 	}
+	{
+		try 
 		{
-		std::cout << "\n--- Test For Presidential Form ---\n" << std::endl;
-		try
-		{
-			Bureaucrat b("B-one", 136);
-			PresidentialPardonForm p("target");
-			p.execute(b);
-			p.beSigned(b);
-			std::cout << "Before decrementing : "<< b << std::endl;
-			b.decrement();
-			std::cout << "After decrementing : " << b << std::endl;
+			std::cout << "-- Invalid Form --" << std::endl;
+			Intern someRandomIntern;
+			Form *ret;
+
+			ret = someRandomIntern.makeForm("cherry creation", "form");
+			ret->execute(Bureaucrat());
 		}
 		catch (std::exception &e){
 			std::cout << e.what() << std::endl;

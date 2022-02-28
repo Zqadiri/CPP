@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 12:40:55 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/02 17:06:07 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/28 17:28:01 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	convertToChar(char **argv)
 		try{
 			int output = std::stoi(argv[1]);
 			if (output < 0 || output > 255)
-				throw std::exception();
+				throw std::out_of_range();
 			if (!std::isprint(output)){
 				std::cout << NON_dis << std::endl;
 				return;	
@@ -118,7 +118,8 @@ int     main(int argc, char **argv)
 {
 	if (argc != 2)
 		std::cout << ERROR << std::endl;
-	else{
+	else
+	{
 		convertToChar(argv);
 		convertToInt(argv);
 		convertToFloat(argv);

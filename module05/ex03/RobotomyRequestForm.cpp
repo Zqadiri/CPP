@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:02:57 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 18:53:02 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/02/28 11:18:53 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm& r
 	this->target = r.target;
 	return (*this);
 }
+
+// std::string		getTarget(void){
+// 	return this->target;
+// }
 
 /*-- Member Functions --*/
 
