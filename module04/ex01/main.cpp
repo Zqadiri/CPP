@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 12:29:09 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 10:56:00 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/02 12:13:29 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int main(void)
 		}
 		for (int i = 0; i < NUMBER_OF_ANIMALS; i++)
 			delete animals[i];
-		// system("leaks Animal");
+		system("leaks Animal");
 	}
 	// Dog basic;
 	// {
