@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:02:49 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 19:23:12 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 15:23:57 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPard
 
 /*-- Member Functions --*/
 
-void    PresidentialPardonForm::execute(Bureaucrat const &b)const{
+void	PresidentialPardonForm::execute(Bureaucrat const &b)const{
 	if (this->getSigned() == 0)
 		throw Form::NotSigned();	
 	else if (b.getGrade() > this->getGradetoExec())

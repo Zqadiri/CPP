@@ -6,11 +6,21 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:16:00 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/03/01 12:56:07 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 12:51:16 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+/*--- Exception --*/
+
+const char* Bureaucrat::GradeTooHighException::what() const throw(){
+	return "GradeTooHigh";
+}
+
+const char* Bureaucrat::GradeTooLowException::what() const throw(){
+	return "GradeTooLow";
+}
 
 /*-- Constructor & Destructor --*/
 

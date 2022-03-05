@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:02:57 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/28 11:18:53 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 15:28:39 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,13 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm& r
 	return (*this);
 }
 
-// std::string		getTarget(void){
-// 	return this->target;
-// }
-
 /*-- Member Functions --*/
 
 void RobotomyRequestForm::execute(Bureaucrat const &b)const
 {
 	int random;
-	if (this->getSigned() == 1)
-		std::cout << "Form is already signed !" << std::endl;
+	if (this->getSigned() == 0)
+		throw Form::NotSigned();	
 	else if (b.getGrade() > this->getGradetoExec())
 		throw Bureaucrat::GradeTooLowException();
 	random = rand();
@@ -58,5 +54,3 @@ void RobotomyRequestForm::execute(Bureaucrat const &b)const
 	else
 		std::cout << "IT'S a FAILURE." << std::endl;
 }
-
-

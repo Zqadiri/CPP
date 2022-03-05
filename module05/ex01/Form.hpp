@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 15:23:55 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 17:47:33 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 12:54:43 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,12 @@ class Form
 		
 		class	GradeTooHighException : public std::exception{
 			public:
-				const char * what () const throw () {
-	  			return "GradeTooHigh";
-   			}
+				const char * what () const throw ();
 		};
 		class	GradeTooLowException : public std::exception{
 			public:
-				const char * what () const throw () {
-	  			return "GradeTooLow";
-   			}
+				const char * what () const throw ();
 		};
-
 		void	beSigned(Bureaucrat &);
 };
 

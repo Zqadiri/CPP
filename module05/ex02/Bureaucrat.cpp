@@ -6,11 +6,21 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:16:00 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 19:11:45 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 15:31:02 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+/*--- Exception --*/
+
+const char* Bureaucrat::GradeTooHighException::what() const throw(){
+	return "GradeTooHigh";
+}
+
+const char* Bureaucrat::GradeTooLowException::what() const throw(){
+	return "GradeTooLow";
+}
 
 /*-- Constructor & Destructor --*/
 
@@ -22,18 +32,17 @@ Bureaucrat::~Bureaucrat(){
 	std::cout << "Bureaucrat Default Destructor" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade)
+Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 {
 	std::cout << "Bureaucrat Parameterized Constructor" << std::endl;
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
-	this->_name = name;
 	this->_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &b)
+Bureaucrat::Bureaucrat(const Bureaucrat &b): _name(b._name)
 {
 	std::cout << "Bureaucrat copy Constructor" << std::endl;
 	*this = b;
@@ -44,7 +53,6 @@ Bureaucrat::Bureaucrat(const Bureaucrat &b)
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &b)
 {
 	std::cout << " = Operator " << std::endl;
-	this->_name = b._name;
 	this->_grade = b._grade;
 	return (*this);
 }

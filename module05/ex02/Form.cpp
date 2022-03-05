@@ -6,11 +6,25 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 15:23:52 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 17:56:54 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 14:47:04 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+
+/*--- Exception --*/
+
+const char* Form::GradeTooHighException::what() const throw(){
+	return "GradeTooHigh";
+}
+
+const char* Form::GradeTooLowException::what() const throw(){
+	return "GradeTooLow";
+}
+
+const char* Form::NotSigned::what() const throw(){
+	return "not signed";
+}
 
 /*-- Constructor & Destructor --*/
 

@@ -6,13 +6,23 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 15:23:52 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 17:56:54 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 15:06:58 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-/*-- Constructor & Destructor --*/
+/*--- Exception --*/
+
+const char* Form::GradeTooHighException::what() const throw(){
+	return "GradeTooHigh";
+}
+
+const char* Form::GradeTooLowException::what() const throw(){
+	return "GradeTooLow";
+}
+
+/*-- Constructors & Destructor --*/
 
 Form::Form(): _name(), _grade_to_sign(), _grade_to_exec(){
 	std::cout << "Form Default Constructor" << std::endl;      
@@ -62,21 +72,21 @@ std::string Form::getName(void) const{
 	return (this->_name);
 }
 
-bool    Form::getSigned(void) const{
+bool	Form::getSigned(void) const{
 	return (this->_singed);
 }
 
-int     Form::getGradetoSign(void) const{
+int		Form::getGradetoSign(void) const{
 	return (this->_grade_to_sign);
 }
 
-int     Form::getGradetoExec(void) const{
+int		Form::getGradetoExec(void) const{
 	return (this->_grade_to_exec);
 }
 
 /*-- Functions  --*/
 
-void    Form::beSigned(Bureaucrat &b)
+void	Form::beSigned(Bureaucrat &b)
 {
 	if (this->getSigned() == 1)
 	{
@@ -88,7 +98,8 @@ void    Form::beSigned(Bureaucrat &b)
 		std::cout << "This Form can not be signed " << std::endl;
 		throw Form::GradeTooLowException();	
 	}
-	else{
+	else
+	{
 		std::cout << "Form signed ! " << std::endl;
 		this->_singed = 1;
 	}

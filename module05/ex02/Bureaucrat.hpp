@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:15:57 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 18:10:25 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/05 14:54:46 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Form; /*forward declaration*/
 class Bureaucrat
 {
 	private:
-		std::string _name;
+		const std::string _name;
 		int _grade;
 
 	public:
@@ -41,15 +41,11 @@ class Bureaucrat
 
 		class GradeTooHighException : public std::exception{
 		public:
-			const char * what () const throw () {
-	  			return "GradeTooHigh";
-   			}
+			const char * what () const throw ();
 		};
 		class GradeTooLowException : public std::exception{
 		public:
-			const char * what () const throw () {
-	  			return "GradeTooLow";
-			}
+			const char * what () const throw ();
 		};
 
 		void	signForm(Form &);
