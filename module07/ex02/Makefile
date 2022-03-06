@@ -6,7 +6,7 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/03 11:31:58 by zqadiri           #+#    #+#              #
-#    Updated: 2022/03/02 11:24:21 by zqadiri          ###   ########.fr        #
+#    Updated: 2022/03/06 10:53:14 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS		= main.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
-CC			= clang++
+CC			= c++
 
 FLAGS		= -Wall -Wextra -Werror -std=c++98
 
