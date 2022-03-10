@@ -6,20 +6,24 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:16:00 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/03 13:38:41 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/10 17:22:13 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 
-template <typename T>
-void    printElement(const T &i){
-    std::cout << i << std::endl;
-}
 
 int main(void)
 {
-    int array[] = {0,1,2,3,4,5};
-    iter(array, 6, printElement);
-    return (0);
+	std::string arr[3] = {"string", "string", "string"};
+	iter(arr, 3, print);
+	int array[] = {0,1,2,3,4,5};
+	iter(array, 6, print);
+	{
+		int tab[] = { 0, 1, 2, 3, 4 };
+		Awesome tab2[5];
+		iter( tab, 5, print );
+		iter( tab2, 5, print);
+	}
+	return (0);
 }

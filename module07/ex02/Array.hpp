@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 11:25:06 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/03/06 12:15:29 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/10 17:31:43 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,12 @@ class Array
 		}
 
 		Array<T>(unsigned int n):ptr(nullptr), _size(n){
-			// <dataType> * <pointer name> = new <dataType> [<size>];
 			if (_size <= 0)
 				throw std::invalid_argument("Can't allocate memory");
 			else{
 				ptr = new T[n];
 				for (size_t i = 0; i < n; i++)
-					ptr[i] = T();					
+					ptr[i] = T();			
 			}
 		}
 
@@ -68,7 +67,13 @@ class Array
 		T& operator[] (unsigned int n){
 			if (n < 0 || n > this->_size)
 				throw std::out_of_range("index Not found");
-			return (*(ptr + n));
+			return (ptr[n]);
+		}
+
+		const T& operator[] (unsigned int n)const {
+			if (n < 0 || n > this->_size)
+				throw std::out_of_range("index Not found");
+			return (ptr[n]);
 		}
 
 		~Array<T>(){

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 12:29:09 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/02/27 10:25:48 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/09 20:01:31 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,9 @@ int main(void)
 		i->makeSound();
 		j->makeSound();
 		meta->makeSound();
+		// delete meta;
+		// delete i;
+		// delete j;
 	}
 	return (1);
 }
