@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 18:14:06 by zqadiri           #+#    #+#             */
-/*   Updated: 2021/11/05 13:16:00 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/11 22:26:27 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <string>
 #include <stack>
 #include <iterator>
+#include <list>
 
 template <typename T>
 class MutantStack : public std::stack<T>
@@ -29,8 +30,9 @@ class MutantStack : public std::stack<T>
 		MutantStack(const MutantStack<T> &mutant){
 			*this = mutant;
 		}
+
 		MutantStack<T> &operator=(const MutantStack<T> &mutant){
-			(void)mutant;
+			this->c = mutant.c;
 			return (*this);
 		}
 
