@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:27:12 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/03/11 14:16:16 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/11 19:28:07 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,31 +31,40 @@ int		easyfind(T con, int occur){
 }
 
 template <typename T>
-int		easyfind(std::stack<T> st, int occur) //LIFO
+int	easyfind(std::stack<T> st, int occur) //LIFO
 {
 	size_t tmp = st.size();
-	for (size_t i = 0; i < tmp; i++)
-	{
-		if (st.top() == occur)
-			return i;
-		else
-			st.pop();
+	std::vector<T> v;
+	for (size_t i = 0; i < tmp; i++){
+		v.push_back(st.top());
+		st.pop();
 	}
-	return -1;
+	return easyfind(v, occur);
 }
 
 template <typename T>
 int		easyfind(std::queue<T> st, int occur) //FIFO
 {
 	size_t tmp = st.size();
-	for (size_t i = 0; i < tmp; i++)
-	{
-		if (st.front() == occur)
-			return i;
-		else
-			st.pop();
+	std::vector<T> v;
+	for (size_t i = 0; i < tmp; i++){
+		v.push_back(st.front());
+		st.pop();
 	}
-	return -1;
+	return easyfind(v, occur);
 }
+
+template <typename T>
+int		easyfind(std::priority_queue<T> st, int occur) //FIFO
+{
+	size_t tmp = st.size();
+	std::vector<T> v;
+	for (size_t i = 0; i < tmp; i++){
+		v.push_back(st.top());
+		st.pop();
+	}
+	return easyfind(v, occur);
+}
+
 
 #endif

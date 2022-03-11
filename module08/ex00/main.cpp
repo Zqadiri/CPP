@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:35:59 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/03/11 14:16:11 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/11 19:27:27 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,22 @@ int main(void)
 			std::cout << easyfind(q, occur) << " (counting from zero) \n" ;
 		}
 	}
+	{
+		std::cout << "---------- Priority_queue ---------" << std::endl;
+		int occur(6);
+		std::priority_queue<int> q;
+		q.push(-9);
+		q.push(6);
+		q.push(1);
+		q.push(3);
+		if (easyfind(q, occur) == -1)
+			std::cout << "Element not found.\n";
+		else{
+			std::cout << "Element " << occur <<" found at position : " ;
+			std::cout << easyfind(q, occur) << " (counting from zero) \n" ;
+		}
+	}
+
 	return 0;
 }
 
