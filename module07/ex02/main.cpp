@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:16:00 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/03/10 17:40:43 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/10 18:12:24 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int main(void)
 		std::cout << "Default State :" << std::endl;
 		printArray(a);
 		a = b;
-		printArray(a);
+		printArray(a); 
 		std::cout << "\n Deep copy check  : " << std::endl;
 		a[5] = a[6] = a[7] = "new string";
 		printArray(a);
