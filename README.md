@@ -35,6 +35,10 @@
 
 [Creating a class object in c++](https://stackoverflow.com/questions/15310846/creating-a-class-object-in-c)
 
+## ****[Polymorphisms in C++](https://catonmat.net/cpp-polymorphism)****
+
+[The Four Polymorphisms in C++](https://catonmat.net/cpp-polymorphism)
+
 ## C++ Overloading
 
 [C++ Overloading (Operator and Function)](https://www.tutorialspoint.com/cplusplus/cpp_overloading.htm)
@@ -51,9 +55,19 @@ There are two major approaches to store real numbers
 
 [Introduction to Fixed Point Number Representation](https://inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html)
 
-## Inheritance
+[](https://stackoverflow.com/questions/3402702/converting-floating-point-to-32-bit-fixed-point-in-java/3405859)
+
+## Copy elision
+
+[Copy elision](https://en.cppreference.com/w/cpp/language/copy_elision)
+
+## Inheritance:
 
 [Inheritance in C++ - GeeksforGeeks](https://www.geeksforgeeks.org/inheritance-in-c/)
+
+## Virtual tables :
+
+[Understandig Virtual Tables in C++](https://pabloariasal.github.io/2017/06/10/understanding-virtual-tables/)
 
 ## Virtual inheritance
 
@@ -116,9 +130,3 @@ There are two major approaches to store real numbers
 ## Containers:
 
 [What are Containers/Adapters? C++](https://stackoverflow.com/questions/3873802/what-are-containers-adapters-c)
-
-/*-- Constructors & Destructor --*/
-
-/*-- Operators --*/
-
-/*-- Menber functions --*/
