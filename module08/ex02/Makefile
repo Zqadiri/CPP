@@ -6,11 +6,11 @@
 #    By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/22 18:15:50 by zqadiri           #+#    #+#              #
-#    Updated: 2022/03/11 22:07:09 by zqadiri          ###   ########.fr        #
+#    Updated: 2022/03/12 11:54:03 by zqadiri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= stack
+NAME		= mutantstack
 
 SRCS		= mutantstack.cpp main.cpp
 

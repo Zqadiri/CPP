@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 15:27:12 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/03/11 21:38:18 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/12 10:46:39 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,5 @@ int		easyfind(std::priority_queue<T> st, int occur) //FIFO
 	}
 	return easyfind(v, occur);
 }
-
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: zqadiri <zqadiri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:30:34 by zqadiri           #+#    #+#             */
-/*   Updated: 2022/03/06 21:05:39 by zqadiri          ###   ########.fr       */
+/*   Updated: 2022/03/13 10:01:33 by zqadiri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,21 +75,13 @@ void    Karen::complain(std::string level)
 	switch (getLevel(level))
 	{
 		case 0:
-			// for (size_t i = 0; i < 4; i++)
 				(this->*Ptr[0])();
-			// break;
 		case 1:
-			// for (size_t i = 1; i < 4; i++)
 				(this->*Ptr[1])();
-			// break;
 		case 2:
-			// for (size_t i = 2; i < 4; i++)
 				(this->*Ptr[2])();
-			// break;
 		case 3:
-			// for (size_t i = 3; i < 4; i++)
 				(this->*Ptr[3])();
-			// break;	
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
